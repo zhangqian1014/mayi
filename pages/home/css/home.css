@@ -1,0 +1,285 @@
+@charset "utf-8";
+#home_page{
+	font-size: 0.4375rem;
+}
+header{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	background: rgba(255,255,255,.5);
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index:10;
+}
+header input{
+	width:90%;
+	height:30px;
+	margin:0 auto;
+	text-indent: 90px;
+	border-radius: 5px;
+	background: #fff url(../images/search-btn.png) no-repeat 75px 8px;
+	background-size: auto 50%;
+	border:1px solid #22bb62;
+}
+.empty_div{
+	height:50px;
+}
+
+
+/*banner部分*/
+.home_banner{
+	background-color: #fff;
+}
+.home_banner .home_banner_bg{
+	width:100%;
+	height:2.5rem;
+	background: url(../images/dadonghai5.jpg) no-repeat center;
+	background-size:  100%;
+}
+.home_banner .home_banner_listIcon{
+	padding:0 0.3125rem;
+	padding-top: 0.3125rem;
+	width:100%;
+	display: flex;
+	flex-wrap:wrap;
+	text-align: center;
+	font-size: 0.375rem;
+}
+.home_banner .home_banner_listIcon a{
+	flex-basis:25%;
+	padding-bottom: 0.3125rem;
+}
+.home_banner .home_banner_listIcon a img{
+	width:50px;
+	margin:0 auto;
+	margin-bottom: 0.1875rem;
+	display: block;
+}	
+/*banner活动列表*/
+.home_banner_Activies ul{
+	width:100%;
+	display: flex;
+	flex-wrap:wrap;
+	text-align: center;
+}
+.home_banner_Activies ul li{
+	flex-basis:50%;
+	width:50%;
+	text-align: center;
+	padding:0.15625rem 0;
+	border-top:1px solid #e3e3e3;
+	border-right:1px solid #e3e3e3;
+
+}
+.home_banner_Activies ul li:nth-of-type(2n){
+	border-right:none;
+}
+.home_banner_Activies ul li a{
+	width:100%;
+	color:#333;
+}
+.home_banner_Activies ul li a img{
+	width:100%;
+	padding:0 0.3125rem;
+}
+.home_banner_Activies .hb_activies_title span{
+	display: block;
+}
+.home_banner_Activies .hb_activies_title font{
+	color:#999;
+	font-size: 0.375rem;
+}
+
+
+/*热门目的地*/
+.hot_city{
+	width:100%;
+}
+.homt_title{
+	width:100%;
+	padding:0.3125rem 0;
+	text-align: center;
+}
+.homt_title h1{
+	font-weight: normal;
+	font-size: 0.78125rem;
+}
+.hot_city .home_hotCity_listPic li{
+	overflow: hidden;
+	position:relative;
+}
+.hot_city .home_hotCity_listPic li span{
+	position: absolute;
+	font-size: 0.625rem;
+	color:#fff;
+	z-index: 5;
+	top:50%;
+	left:50%;
+	transform:translate(-50%);
+}
+.hot_city .home_hotCity_listPic li img{
+	width:100%;
+	float:left;
+}
+
+/*推荐房源*/
+.recommend_house{
+	width:100%;
+	background: #fff;
+}
+.house_content{
+	position:relative;
+}
+.house_content a{
+	display: block;
+	width:100%;
+	overflow: hidden;
+}
+.house_content a>img{
+	// float:left;
+	width:100%;
+	height:6.25rem;
+	margin-bottom: 0.15625rem;
+}
+.house_content .collection{
+	position:absolute;
+	right: 0.3125rem;
+	top: 0.3125rem;
+	z-index: 2;
+	width: 1.25rem;
+	height: 1.25rem;
+	background: url(../images/coll_gray.png) no-repeat center center;
+	background-size: 0.84375rem 0.75rem;
+}
+.house_content .abs{
+	position:absolute;
+}
+.house_content .price{
+	left: 0;
+    top: 4.8125rem;
+    height: 1.1875rem;
+}
+.house_content .price span{
+	display: inline-block;
+    font-size: 0.78125rem;
+    background: rgba(0, 0, 0, 0.8);
+    line-height: 1.1875rem;
+    height: 1.1875rem;
+    color: #fff;
+    padding: 0 0.28125rem;
+}
+.house_content .price b{
+	font-weight: normal;
+	font-size: 0.46875rem;
+}
+.house_content .landlord_img{
+	right: 0.46875rem;
+    top: 5.375rem;
+}
+.house_content .landlord_img img{    
+	border: 1px solid #fff;
+    border-radius: 50%;
+    width: 1.5625rem;
+    height: 1.5625rem;
+}
+.house_content .room_level{
+	left: 0.25rem;
+    top: 0.25rem;
+}
+.house_content .room_level img{    
+	width:1.09375rem;
+}
+.house_content .room_intoduce{
+	height:1.71875rem;
+	line-height: 0.6875rem;
+	color:#444;
+}
+.house_content .room_intoduce dt span{
+	padding: 0  1.875rem  0  0.3125rem;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    text-overflow: ellipsis;
+    display: block;
+}
+.house_content .room_intoduce dd{
+	margin-left: 0.3125rem;
+}
+.house_content .room_intoduce dd nav{
+	display: block;
+    margin-right: 0.3125rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 0.4375rem;
+    line-height: 0.625rem;
+    color:#777;
+}
+.house_content .room_intoduce .c22bb62{
+	color:#22bb62;
+}
+.house_content .fy_label{
+	color:#333;
+	padding:0 0.3125rem;    
+	margin: -0.15625rem 0 0.3125rem 0;
+}
+.house_content .fy_label li{
+    font-size: 12px;
+    color: #7aac9d;
+    padding: 3px 6px;
+    border-radius: 3px;
+    background-color: #f0f8f5;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/*热门房东*/
+.landlord{
+	width:100%;
+}
+.landlord_content{
+	overflow-x: scroll;
+}
+.landlord_content .landlord_list{
+	width:300%;
+	display: flex;
+	overflow-x: scroll;
+	text-align: center;
+}
+.landlord_content .landlord_introduce{
+	padding:0.46875rem;
+	flex-basis:50%;
+	background: #fff;
+	margin-right: 0.3125rem;
+	line-height: 0.75rem;
+	padding-bottom: 0.9375rem;
+}
+.landlord_content .landlord_introduce span{
+	color:#777;
+}
+.landlord_content .landlord_details{
+	border-bottom: 1px solid #22bb62;
+	margin-bottom: 0.15625rem;
+}
+.landlord_content .landlord_details img{
+	border-radius: 50%;
+}
+.landlord_content .landlord_p{
+	text-align: left;
+	overflow: hidden;
+	text-overflow:elliplsis;
+	display:-webkit-box;
+	-webkit-line-clamp:3;
+	-webkit-box-orient:vertical;
+}
+
+
+.safe_pay{
+	height:1.875rem;
+	background: url(../images/safe_pay.png) no-repeat center;
+	background-size: 50%;
+}
+

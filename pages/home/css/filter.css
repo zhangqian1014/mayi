@@ -1,0 +1,182 @@
+@charset "UTF-8";
+#search{
+	font-size: 0.4375rem;
+	background: #f5f5f5 ;
+}
+.search_header{
+	height:1.40625rem;
+	line-height:1.40625rem;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	font-size: 0.5625rem;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    background-color: #fff;
+    padding: 0 0.3125rem;
+    padding-left: 0;
+    box-sizing: border-box;
+    line-height: 1.375rem;
+}
+
+.search_header .get_back{
+    width: 1.3125rem;
+    height: 1.375rem;
+    text-align: center;
+    cursor: pointer;
+    background: url(../images/back.png) no-repeat center;
+    background-size: auto 50%;
+}
+.search_header .clear{
+    color:#22bb62;
+    font-size:0.4375rem;
+}
+.search_form{
+    padding:0 0.3125rem 1.875rem;
+}
+.col-sm {
+    margin-top: 0.3125rem;
+}
+.filter_tit{
+	text-align: center;
+    line-height: 1.25rem;
+}
+.label{
+	text-align: center;
+}
+.label span{
+	display: inline-block;
+    padding: 0.375rem 0;
+    background-color: #fff;
+    border-radius: 2px;
+    margin: 0 0.15625rem;
+    width: 20%;
+}
+.filter_select{
+	position:relative;
+}
+.filter_select select{
+	background-color: #fff;
+    padding: 0.3125rem 0.0625rem  0.3125rem 0;
+    width: 100%;
+    border-radius: 3px;
+    color: #333;
+    font-size: 0.4375rem;
+}
+/*进度条*/
+.price_range {
+    margin: 0.9375rem auto 0.625rem;
+}
+.slider-container {
+    margin: 0 auto;
+    width: 7.5rem;
+    height:0.25rem;
+}
+.theme-green .back_bar {
+    height: 0.25rem;
+    width:7.5rem;
+    border-radius: 2px;
+    background-color: #d9d9d9;
+    position: relative;
+}
+.back-bar .slider-container {
+	position: relative;
+}
+.slider-container .back-bar .selected-bar {
+    position: absolute;
+    height: 100%;
+}  
+.selected-bar{
+	width:7.5rem;
+	height:0.25rem;
+	left:0;
+	border-radius: 2px;
+    background-color: #22bb62;
+}
+.pointer{
+	position:absolute;
+	cursor: col-resize;
+    opacity: 1;
+    z-index: 2;
+    width: 1.25rem;
+    height: 1.25rem;
+    top: -0.46875rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(../images/range_icon.jpg) no-repeat;
+    background-size: 1.25rem 1.25rem;
+}
+.low{
+	left:-0.625rem;
+}
+.high{
+	left:6.875rem;
+}
+.pointer-label{
+	position: absolute;
+    top: -30px;
+    white-space: nowrap;
+    line-height: 1;
+    color: #333;
+}
+.more{
+	left:6.71875rem;
+}
+
+
+
+
+
+.room_num span{
+	display: block;
+    width: 25%;
+    margin: 0;
+    float: left;
+    box-sizing: border-box;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #cecece;
+    padding: 0.46875rem;
+    text-align: center;
+    background-color: #fff;
+}
+.quick_order{
+	width: 100%;
+    padding: 0.375rem 0;
+    position: relative;
+    background: #fff;
+}
+.quick_order img{
+	width: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.15625rem;
+}
+.col-sm ul li{
+	display: inline-block;
+    padding: 0.375rem 0.25rem;
+    background-color: #fff;
+    margin: 0.15625rem 0.0625rem;
+    border-radius: 2px;
+}
+
+/*底部*/
+.filter_footer{
+	width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    text-align: center;
+    line-height: 1.40625rem;
+    color: #fff;
+    font-size: 0.5rem;
+    border-radius: 2px;
+    font-weight: bold;
+    padding-bottom: 0.3125rem;
+}
+.confirm{
+	background-color: #22bb62;
+    margin: 0 0.3125rem;
+    border-radius: 3px;
+}

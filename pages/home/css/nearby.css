@@ -1,0 +1,284 @@
+#nearby{
+	font-size: 0.4375rem;
+}
+/*头部*/
+.header_fixed{
+	position:fixed;
+	top:0;
+	left:0;	
+	right:0;
+	font-size: 0.46875rem;
+	z-index: 5;
+}
+.header_fixed .nb_header{
+	width: 100%;
+	display: flex;
+    background-color: #fff;
+    padding:0  0.3125rem;
+    padding-left: 0;
+    box-sizing: border-box;
+    line-height: 1.375rem;
+}
+.nb_header .getback{
+	width:1.3125rem;
+	height:1.375rem;
+	text-align: center;    
+	cursor: pointer;
+	background: url(../images/back.png) no-repeat center;
+	background-size: auto 50%;
+}
+.nb_header .getback a{
+	display: inline-block;
+	width:100%;
+	height:100%;
+}
+.nb_header .search_condition{
+	width:65%;
+	height:100%;
+	text-align: center;
+	display: flex;
+	align-item:center;
+	margin-top: 0.1875rem;
+	margin-right: 0.3125rem;
+	border:1px solid #22bb62;
+	border-radius: 5px;
+}
+.nb_header .search_condition li{
+	flex-grow:1;
+	height: 40%;
+	line-height: 0.625rem;
+	padding:0.15625rem 0;
+	color:#22bb62;
+}
+.active{
+	background: #22bb62;
+	color:#fff !important;	
+}
+
+.nb_header .location_city{
+	
+}
+.nb_header .location_city::after{
+	content:"";
+	display:inline-block;    
+	border-style: solid;
+    border-color: #999 transparent transparent;
+    border-width: 7px 5px 0;
+    margin-left: 0.15625rem;
+}
+ .choose_nav{
+	padding:0.3125rem 0;
+	display: flex;
+	text-align: center;
+	background: #fff;
+	border-top:1px solid #d9d9d9;
+}
+.choose_nav a{
+	flex-grow:1;
+	border-right: 1px solid #d9d9d9;
+	padding: 0.15625rem 0;
+}
+.choose_nav a:last-child{
+	border-right: none;
+}
+
+
+/*主体内容列表部分*/
+.nearby_list_content{
+	margin-top: 97px;
+}
+.nb_room_list{
+	
+}
+.choose_div{
+	width:100%;
+	overflow-x: scroll;
+}
+.choose_list{
+	overflow: hidden;
+	padding:0.3125rem;
+	width:110%;
+}
+.choose_list li{
+	float: left;
+	padding:0.0625rem 0.3125rem;
+	border:1px solid #d9d9d9;
+	background-color: #fff;
+	border-radius: 0.15625rem;
+	margin-left: 0.46875rem;
+	color:#666666;
+}
+
+.house_content{
+	position:relative;
+	background: #fff;
+}
+.house_content a{
+	display: block;
+	width:100%;
+	overflow: hidden;
+}
+.house_content a>img{
+	// float:left;
+	width:100%;
+	height:6.25rem;
+	margin-bottom: 0.15625rem;
+}
+.house_content .collection{
+	position:absolute;
+	right: 0.3125rem;
+	top: 0.3125rem;
+	z-index: 2;
+	width: 1.25rem;
+	height: 1.25rem;
+	background: url(../images/coll_gray.png) no-repeat center center;
+	background-size: 0.84375rem 0.75rem;
+}
+.house_content .abs{
+	position:absolute;
+}
+.house_content .price{
+	left: 0;
+    top: 4.8125rem;
+    height: 1.1875rem;
+}
+.house_content .price span{
+	display: inline-block;
+    font-size: 0.78125rem;
+    background: rgba(0, 0, 0, 0.8);
+    line-height: 1.1875rem;
+    height: 1.1875rem;
+    color: #fff;
+    padding: 0 0.28125rem;
+}
+.house_content .price b{
+	font-weight: normal;
+	font-size: 0.46875rem;
+}
+.house_content .landlord_img{
+	right: 0.46875rem;
+    top: 5.375rem;
+}
+.house_content .landlord_img img{    
+	border: 1px solid #fff;
+    border-radius: 50%;
+    width: 1.5625rem;
+    height: 1.5625rem;
+}
+.house_content .room_level{
+	left: 0.25rem;
+    top: 0.25rem;
+}
+.house_content .room_level img{    
+	width:1.09375rem;
+}
+.house_content .room_intoduce{
+	height:1.71875rem;
+	line-height: 0.6875rem;
+	color:#444;
+}
+.house_content .room_intoduce dt span{
+	padding: 0  1.875rem  0  0.3125rem;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    text-overflow: ellipsis;
+    display: block;
+}
+.house_content .room_intoduce dd{
+	margin-left: 0.3125rem;
+}
+.house_content .room_intoduce dd nav{
+	display: block;
+    margin-right: 0.3125rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 0.4375rem;
+    line-height: 0.625rem;
+    color:#777;
+}
+.house_content .room_intoduce .c22bb62{
+	color:#22bb62;
+}
+.house_content .fy_label{
+	color:#333;
+	padding:0 0.3125rem;    
+	margin: -0.15625rem 0 0.3125rem 0;
+}
+.house_content .fy_label li{
+    font-size: 12px;
+    color: #7aac9d;
+    padding: 3px 6px;
+    border-radius: 3px;
+    background-color: #f0f8f5;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* 地图找房 */
+.nb_map{
+	display: none;
+	height:100%;
+}
+.room_show{
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index: 10;
+}
+.room_show ul li{
+	color: #999;
+    background: #fff !important;
+    font-size: 0.4375rem;
+    clear: both;
+    position: relative;
+    display: block;
+    border-bottom: 1px #F2F2F2 solid;
+    overflow:hidden; 
+    display: none;
+}
+.room_show ul li img{
+	width: 34%;
+	height:3.0625rem;
+    max-width: 3.75rem;
+    float:left;
+}
+.room_show ul li .rightPart{
+	float:left;
+	width:60%;
+	padding:0.3125rem;
+}
+.rightPart .right_name{
+	font-size: 0.5rem;
+	overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    text-overflow: ellipsis;
+    margin:0.09375rem 0;
+}
+.right_details{
+	color:#999;
+	position: relative;
+    margin:0.09375rem 0;
+}
+.right_price{
+	position: absolute;
+	right: -15px;
+	top:5px;
+	font-weight: normal;
+}
+.right_price span{
+	font-size: 0.5rem;
+	color:#ff6600
+}
+.right_address{
+	color:#999;
+    margin:0.09375rem 0;
+}
+
+#map_container{
+	width:100%;
+	height:17.75rem;
+}

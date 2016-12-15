@@ -1,0 +1,86 @@
+<div id="nearby">
+	<div class="header_fixed">
+		<header class="nb_header">
+			<span class="getback"><a ng-click="getBack()"></a></span>
+			<ul class="search_condition">
+				<li class="source_list active">房源列表</li>
+				<li class="search_map">地图找房</li>
+			</ul>
+			<span class="location_city">北京</span>
+		</header>
+		<nav class="choose_nav">
+			<a href="">日期</a>
+			<a ui-sref="filter({router:'nearby'})">筛选</a>
+			<a href="">位置区域</a>
+			<a href="">默认排序</a>
+		</nav>
+	</div>
+	<div class="nearby_list_content">
+		<div class="nb_room_list">
+			<div class="choose_div">
+				<ul class="choose_list">
+					<li>蚂蚁优选</li>
+					<li>蚂蚁实拍</li>
+					<li>可做饭</li>
+					<li>二居</li>
+				</ul>
+			</div>
+			<div class="choose_repeat" ng-repeat="mapRoom in datas">
+				<div class="house_content">
+					<div class="collection"></div>
+					<a href="">
+						<img src="{{mapRoom.mainimgurl}}" alt="">
+						<p class="price abs">
+							<span><b>￥</b>{{mapRoom.dayprice}}</span>
+						</p>
+						<p class="landlord_img abs">
+							<img src="{{mapRoom.landlordheadimgurl}}">
+						</p>
+						<p class="room_level abs">
+							<img src="pages/home/images/level9-2_1.png">
+						</p>
+						<dl class="room_intoduce">
+							<dt><span>{{mapRoom.sName}}</span></dt>
+							<dd>
+								<nav>
+									<span class="c22bb62">{{mapRoom.goodCommentRate}}分</span> ·
+									<span>{{mapRoom.commentcnt}}评论</span> ·
+									<span>已订{{mapRoom.booknightcnt}}晚</span> ·
+									<span>{{mapRoom.roomtype}}</span>
+									<span>住{{mapRoom.guestnum}}人</span> ·
+									<span>{{mapRoom.sDisplayaddr}}</span>
+								</nav>
+							</dd>
+						</dl>
+						<ul class="fy_label">
+							<li>长租优惠</li>
+							<li>蚂蚁实拍</li>
+						</ul>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="nb_map">
+			<div class="room_show">
+				<ul>
+					<li ng-repeat="mapRoom in datas">
+						<a href="">
+							<img src="{{mapRoom.mainimgurl}}">
+							<div class="rightPart">
+								<div class="right_name">{{mapRoom.sName}}</div>
+								<div class="right_details">
+									<span>{{mapRoom.goodCommentRate}}分</span> ·
+									<span>{{mapRoom.commentcnt}}评论</span> ·
+									<span>{{mapRoom.roomtype}}</span>
+									<b class="right_price">￥<span>{{mapRoom.dayprice}}</span></b>
+								</div>
+								<div class="right_address">{{mapRoom.sDisplayaddr}}</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="map_container"></div>
+		</div>
+	</div>
+</div>

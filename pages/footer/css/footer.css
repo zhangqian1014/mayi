@@ -1,0 +1,40 @@
+@charset "UTF-8";
+footer{
+	width:100%;
+	height:55px;
+	display: flex;
+	text-align: center;
+	background-color: #fff;
+	font-size:0.34375rem;
+	position:fixed;
+	right:0;
+	left:0;
+	bottom:0;
+}
+footer a{
+	flex-grow:1;
+	padding-top: 35px;
+}
+.homeIcon{
+	background: url(../../../libs/images/home-act.png) no-repeat center 5px;
+	background-size: auto 50%;
+}
+
+.msgIcon{
+	background: url(../../../libs/images/message.png) no-repeat center 4px;
+	background-size: auto 50%;
+}
+
+.orderIcon{
+	background: url(../../../libs/images/order.png) no-repeat center 4px;
+	background-size: auto 50%;
+}
+
+.mineIcon{
+	background: url(../../../libs/images/mine.png) no-repeat center 3px;
+	background-size: auto 50%;
+}
+.botEmpty{
+	width:100%;
+	height:55px;
+}

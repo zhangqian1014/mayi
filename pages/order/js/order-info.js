@@ -1,0 +1,9 @@
+angular.module('orderInfo',[])
+.config(function($stateProvider,$urlRouterProvider){
+	$stateProvider
+	.state('order-info',{
+		url:'/order-info',
+		templateUrl:'pages/order/html/order-info.html',
+		css:'pages/order/css/order-info.css'
+	})
+})

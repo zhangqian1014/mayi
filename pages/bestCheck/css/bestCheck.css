@@ -1,0 +1,296 @@
+body{
+    color: #333;
+    font-family: "Microsoft yahei";
+    background-color: #f0f0f0;
+    font-size: .4375rem;
+    
+}
+*{
+	box-sizing: border-box;
+}
+.top-img img{
+	height: 5.3125rem;
+	width: 100%;
+}
+.title-1{
+	font-size: 0.5rem;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 0.125rem;
+	line-height: 0.75rem;
+}
+.title-2{
+	text-align: center;
+	font-size: 0.46875rem;
+	margin-top: 0.0625rem;
+}
+.vid{
+	height: 7.625rem;
+	width: 100%;
+	margin-top: 0.15625rem;
+}
+video{
+	height: auto;
+	width: 100%;
+	poster:url(http://staticnew.mayi.com/resourcesWeb/images/preference_face.jpg;)
+
+}
+nav{
+	background-color: #fff;
+	width: 100%;
+	height: 1.375rem;
+	margin-top: 0.125rem;
+}
+nav ul{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content:space-between;
+}
+nav ul li{
+	width: 33%;
+	height: 100%;
+	background-color: #ff5a60;
+	text-align: center;
+	line-height: 1.375rem;
+	font-size: 0.4375rem;
+	color: #fff;
+}
+#title-top{
+	position: fixed;
+	top: 0;
+	margin-top: 0;
+	z-index: 999;
+}
+
+section{
+	padding: 0.3125rem;
+}
+.sect{
+	padding: 0;
+}
+.public-title h3{
+	
+	font-size: 0.5rem;
+}
+.public-title i{
+	display: inline-block;
+	width: 0.125rem;
+	background-color: #ff5a5f;
+    border-radius: 0.0625rem;
+    margin-right: 0.15625rem;
+}
+.tit-1{
+	margin: 0.15625rem 0;
+}
+section p{
+	margin-top: 0.3125rem;
+}
+.tit-2{
+	padding: 0.3125rem 0;
+	margin-left: 0.3125rem;
+}
+.city-list{
+	height: 1.375rem;
+	display: flex;
+	justify-content:space-between;
+}
+
+.city-list li{
+	width: 14%;
+	background-color: #22bb61;
+	color: #fff;
+	font-size: 0.4375rem;
+	text-align: center;
+	line-height: 1.375rem;
+}
+#city-on{
+	background-color: #fde44c;
+	color:#000;
+}
+.room{
+	width: 100%;
+	overflow: hidden;
+	box-sizing:border-box;
+	margin-top: 0.3125rem;
+}
+.room-list {
+	overflow: hidden;
+	box-sizing:border-box;
+}
+.room-list li {
+	padding: 0.15625rem 0.3125rem;
+	height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.room-list li a{
+	display: block;
+	overflow: hidden;
+}
+
+.room-list li a img{
+	width: 40%;
+    max-width: 260px;
+    vertical-align: middle;
+    float: left;
+    display: block;
+}
+.room-instro{
+	margin-left: 0.3125rem;
+	margin-top: 0.15625rem;
+	float: left;
+	width: 56%;
+	box-sizing: border-box;
+}
+.room-instro strong{
+	line-height:0.5625rem;
+    height: 0.78125rem;
+    display: block;
+    color: #2f2f2f;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    white-space: nowrap;
+    font-weight: normal;
+}
+.room-size{
+	font-size: 0.375rem;
+	color: #777776;
+}
+.room-size span:nth-child(2){
+	margin-left: 0.3125rem;
+}
+.room-price{
+	color:  #fc6e21;
+	margin-top: 0.46875rem;
+}
+.room-good{
+	position: absolute;
+	top: 0.3125rem;
+    left: 0.46875rem;
+}
+.room-good img{
+	width: 40%;
+	max-width: 260px;
+    vertical-align: middle;
+}
+/*点击隐藏的room*/
+
+
+/*点赞*/
+.like{
+	position: absolute;
+    bottom: 0.3125rem;
+    right: 0.3125rem;
+    color: #333333;
+    border-radius: 0.3125rem;
+    border: 0.03125rem solid #999999;
+    padding: 0.09375rem 0.3125rem;
+    z-index: 88;
+    font-size: 0.4375rem;
+}
+.like span:first-child{
+	width: 0.625rem;
+    height: 0.625rem;
+    margin-right: 0.15625rem;
+    display: block;
+    background: url(http://staticnew.mayi.com/resourcesWap/topic/2016/yzfy/images/like.png) left center no-repeat;
+    background-size: 200%;
+    float: left;
+}
+.more-room{
+	display: none;
+}
+.moreBtn{
+	width: 50%;
+	height: 1.125rem;
+    background-color: #ffb4b6;
+    color: #fff;
+    line-height: 36px;
+    margin: 10px auto;
+    text-align: center;
+}
+/*回到顶部*/
+#go-top{
+	width: 1.375rem;
+	height: 1.375rem;
+	position: fixed;
+	right: 0.3125rem;
+	bottom:2.71875rem;
+	display: none;
+	transition:all 3s;
+
+}
+#go-top img{
+	width: 100%;
+}
+
+.play-rule{
+	line-height: 0.6875rem;
+}
+.play-rule>span{
+	width: 0.5rem;
+    height: 0.5rem;
+    display: inline-block;
+    float: left;
+    background: #22bb62;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 0.5rem;
+    text-align: center;
+    margin: 0.09375rem 0 0 -0.09375rem;
+}
+
+.peer>img{
+	width: 100%;
+	vertical-align: middle;
+}
+.mb5{
+	margin-bottom: 0.15625rem;
+}
+.mt10{
+	margin-top: 0.3125rem;
+}
+.room-mystical{
+	width: 100%;
+}
+.room-img{
+	margin: 0.3125rem 0.5rem;
+}
+.room-img li{
+	width: 50%;
+	padding:0 0.3125rem;
+	float: left;
+}
+.room-img li a img{
+	width: 100%;
+	border: 0.03125rem #ccc solid;
+}
+.room-img::after{
+	 display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+.moreBtn1{
+	width: 50%;
+	height: 1.125rem;
+    background-color: #ffb4b6;
+    color: #fff;
+    line-height: 36px;
+    margin: 10px auto;
+    text-align: center;
+
+}
+.apply{
+	margin-bottom: 1.71875rem;
+}
+
+.apply span{
+	color: #ff5a5f;
+	
+}
+.more-rm{
+	display: none;
+}

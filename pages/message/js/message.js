@@ -3,6 +3,7 @@ angular.module('msgPage', [])
 	$stateProvider
 	.state('index.message',{
 		url:'/message',
-		templateUrl:'pages/message/message.html'
+		templateUrl:'pages/message/message.html',
+		css:"pages/message/css/message.css"
 	})
 })

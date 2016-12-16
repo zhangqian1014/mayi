@@ -1,6 +1,7 @@
 var express = require('express');
 var http = require('http');
 var app = express();
+var qs = require('querystring'); 
 
 app.get('/city',function(req,res){
     //获取用户传递过来的参数
@@ -19,6 +20,40 @@ app.get('/area',function(req,res){
         console.log(info);
     });
 });
+app.get('/getSuggest',function(request,response){
+    var value = request.query['value'];
+
+    console.log(value);
+    var post_data = {  
+        searchkey:value,
+        cityid:'0',
+        pagefrom:'list',
+        platfrom:2
+    }; 
+    var content = qs.stringify(post_data);  
+      
+    var options = {  
+        hostname: 'm.mayi.com',  
+        path: '/getSuggest',  
+        method: 'POST',
+        headers: {  
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'  
+        }  
+    };  
+      
+    var req = http.request(options, function (res) {  
+        res.setEncoding('utf-8');  
+        res.on('data', function (chunk) {
+            response.send(JSON.parse(chunk));
+        });  
+    });  
+    req.on('error', function (e) {  
+        console.log('problem with request: ' + e.message);  
+    });
+    // write data to request body  
+    req.write(content);  
+    req.end(); 
+}) 
 app.get("*",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
 	res.sendFile(__dirname + req.path);

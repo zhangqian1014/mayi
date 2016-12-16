@@ -1,0 +1,96 @@
+header{
+	width: 100%;
+	height:6.34375rem;
+}
+header img{
+	width: 100%;
+	border: none;
+	height: 100%;
+}
+.container{
+	width: 100%;
+
+}
+.forms{
+	width: 100%;
+	padding: 0 0.40625rem;
+	font-size: 0.375rem;
+	color: 
+
+}
+.forms li{
+	height: 1.1875rem;
+	width: 100%;
+	border: solid 0.03125rem #ccc;
+	border-radius: 0.5625rem;
+	line-height: 1.1rem;
+	overflow: hidden;
+}
+.forms input{
+	height: 90%;
+	width: 60%;
+	margin-left: 0.225rem;
+	border: none;
+}
+.phone{
+	margin-top: 0.65625rem;
+}
+.imgCodes{
+	margin-top: 0.25rem;
+}
+.imgCodes img{
+	height: 100%;
+	width: 3.0rem;
+	margin-left: 0.3125rem;
+	vertical-align: middle;
+}
+
+.numCodes{
+	margin-top: 0.25rem;
+
+}
+.numCodes input{
+	width: 64%;
+}
+.numCodes span{
+	border-left: 0.03125rem solid #ccc;
+	padding-left: 0.46875rem;
+	width: 3.125rem;
+	text-align: center;
+}
+.submits{
+	margin-top: 0.40625rem;
+	text-align: center;
+	font-size: 0.40625rem;
+	background-color: #e5e5e5;
+}
+.line{
+	height: 0.03125rem;
+	width: 100%;
+	background-color: #ccc;
+	margin-top: 0.875rem;
+	text-align: center;
+	position: relative;
+	
+
+}
+.line span{
+	font-size: 0.375rem;
+	display: inline-block;
+	background-color: #fff;
+	padding: 0.0625rem;
+	position: absolute;
+	top: -0.3125rem;
+	left: 42%;
+
+}
+.content {
+	font-size: 0.375rem;
+	padding: 0 0.375rem;
+	margin-top: 0.625rem;
+	margin-bottom: 1.71875rem;
+}
+.content p{
+	line-height: 1.5;
+    margin-bottom: .25rem;
+}

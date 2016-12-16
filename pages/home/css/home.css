@@ -265,6 +265,8 @@ header input{
 	margin-bottom: 0.15625rem;
 }
 .landlord_content .landlord_details img{
+	width:1.6875rem;
+	height:1.6875rem;
 	border-radius: 50%;
 }
 .landlord_content .landlord_p{

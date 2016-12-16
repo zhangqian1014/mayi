@@ -1,33 +1,33 @@
 <div id="home_page">
 	<header>
-		<input type="text" name="" placeholder="搜索城市或目的地">
+		<a ui-sref="city"><input type="text" placeholder="搜索城市或目的地"></a>
 	</header>
 	<div class="empty_div"></div>
 	<!-- banner部分 -->
 	<section class="home_banner">
 		<section class="home_banner_bg"></section>
 		<section class="home_banner_listIcon">
-			<a ui-sref="nearby">
+			<a ui-sref="nearby" >
 				<img src="http://staticnew.mayi.com/resourcesWap/v2015/images/near_house.png">
 				<span>附近房源</span>
 			</a>
-			<a href="">
-				<img src="http://staticnew.mayi.com/resourcesWap/v2015/images/near_house.png">
+			<a href="#">
+				<img src="http://staticnew.mayi.com/resourcesWap/v2015/images/my_order.png">
 				<span>我的订单</span>
 			</a>
-			<a href="">
-				<img src="http://staticnew.mayi.com/resourcesWap/v2015/images/near_house.png">
+			<a href="#">
+				<img src="http://staticnew.mayi.com/resourcesWap/v2015/images/check-history.png">
 				<span>浏览记录</span>
 			</a>
-			<a href="">
-				<img src="http://staticnew.mayi.com/resourcesWap/v2015/images/near_house.png">
+			<a href="#">
+				<img src="http://staticnew.mayi.com/resourcesWap/v2015/images/fd_rect.png">
 				<span>房东招募</span>
 			</a>
 		</section>
 		<section class="home_banner_Activies">
 			<ul>
 				<li>
-					<a href="">
+					<a ui-sref="index.week">
 						<img src="https://i1.mayi.com/mayi75/M24/PR/XA/RY7JUB2RKE2F7KLZZHVQKPW3SXJGJT.jpg_250x116c.jpg">
 						<p class="hb_activies_title">
 							<span>嗨翻周末</span>
@@ -36,29 +36,29 @@
 					</a>
 				</li>
 				<li>
-					<a href="">
-						<img src="https://i1.mayi.com/mayi75/M24/PR/XA/RY7JUB2RKE2F7KLZZHVQKPW3SXJGJT.jpg_250x116c.jpg">
+					<a ui-sref="index.bestCheck">
+						<img src="https://i1.mayi.com/mayi77/M63/QZ/DJ/65SVP9X6YMH4UMH5JXKBXL5TIWQOIQ.jpg_250x116c.jpg">
 						<p class="hb_activies_title">
-							<span>嗨翻周末</span>
-							<font>周边游目的地精选</font>
+							<span>蚂蚁优选</span>
+							<font>只为品质安心</font>
 						</p>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a ui-sref="index.friend">
 						<img src="https://i1.mayi.com/mayi21/M22/WV/NK/2ACDJFZ05DV6K9SS6RCH4N7030HVPL.jpg_250x116c.jpg">
 						<p class="hb_activies_title">
-							<span>嗨翻周末</span>
-							<font>周边游目的地精选</font>
+							<span>邀请好友</span>
+							<font>先领券 再下单</font>
 						</p>
 					</a>
 				</li>
 				<li>
-					<a href="">
-						<img src="https://i1.mayi.com/mayi75/M24/PR/XA/RY7JUB2RKE2F7KLZZHVQKPW3SXJGJT.jpg_250x116c.jpg">
+					<a ui-sref="index.outing">
+						<img src="https://i1.mayi.com/mayi70/M60/IP/WR/SIEPBJWAWNLBBQXXB581BIK1BGQAZ3.jpg_250x116c.jpg">
 						<p class="hb_activies_title">
-							<span>嗨翻周末</span>
-							<font>周边游目的地精选</font>
+							<span>出游风向标</span>
+							<font>开启旅游奇缘</font>
 						</p>
 					</a>
 				</li>
@@ -187,7 +187,17 @@
 		</div>
 		<div class="landlord_content">
 			<div class="landlord_list">
-				<section class="landlord_introduce">
+				<section class="landlord_introduce" ng-repeat="land in landlordList">
+					<div class="landlord_details">
+						<img src="{{land.landImg}}">
+						<section>
+							<p>{{land.landName}}</p>
+							<span>{{land.landGender}}</span>
+						</section>
+					</div>
+					<p class="landlord_p">{{land.landInfo}}</p>
+				</section>
+				<!-- <section class="landlord_introduce">
 					<div class="landlord_details">
 						<img src="pages/home/images/QNLTKP18T0FLR9XY6G75M6W5PZ4G9A.jpg_54x54c.jpg">
 						<section>
@@ -216,17 +226,7 @@
 						</section>
 					</div>
 					<p class="landlord_p">我是一个90后的阳光小青年，学的是平面设计，平时喜欢打篮球。在一次出游的时候发现了蚂蚁短租...</p>
-				</section>
-				<section class="landlord_introduce">
-					<div class="landlord_details">
-						<img src="pages/home/images/QNLTKP18T0FLR9XY6G75M6W5PZ4G9A.jpg_54x54c.jpg">
-						<section>
-							<p>kitty小屋</p>
-							<span>男</span>
-						</section>
-					</div>
-					<p class="landlord_p">我是一个90后的阳光小青年，学的是平面设计，平时喜欢打篮球。在一次出游的时候发现了蚂蚁短租...</p>
-				</section>
+				</section> -->
 			</div>
 		</div>
 	</section>

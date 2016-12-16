@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市列表</title>
+</head>
+<body>
+	<div class="city-list" input-search>
+		<header ng-if="flag">
+			<div class="back"></div>
+			<input type="text" name="" placeholder="搜索城市或目的地" class="input">
+			<div class="cancel">取消</div>
+		</header>
+		<div class="search_list" style="display: none">
+			<ul>
+				<h2>北京</h2>
+				<li></li>
+			</ul>
+		</div>
+		<div class="place-list">
+			<div class="header" ng-if="flag">
+				<ul class="search-nearby">
+					<li>
+						<a href="#search-nearby">搜索附近</a>
+					</li>
+				</ul>
+				<ul class="history">
+					<p>历史搜索</p>
+					<li><a href="">厦门</a></li>
+				</ul>
+				<ul class="hot-city">
+					<p>热门目的地</p>
+					<li ng-repeat="x in opencitys" ng-if="x.ishotcity">
+						<!-- http://m.mayi.com/ajax/searchmore/?offset=1&isNear=1&query_str=beijing -->
+						<a ui-sref='getCity' data-spell={{x.url}}>{{x.namechinese}}</a>
+					</li>
+				</ul>
+			</div>
+
+			<div>
+				<!-- <ul class="spell-category"  ng-repeat="x in spellArr">	
+					<h2>{{x}}</h2>
+					<li ng-repeat="y in opencitys" ng-if="y.simplespellcn | myFilter: x"><a ui-sref={{y.url}}>{{y.namechinese}}</a></li>
+				</ul> -->
+				<ul class="spell-category"  ng-repeat="x in cityArr">	
+					<h2>{{x.category}}</h2>
+					<li ng-repeat="y in x.cityList"><a ui-sref={{y.url}}>{{y.namechinese}}</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html> 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>登录</title>
+</head>
+<body>
+	<div class="login">
+		<header>
+			<a ui-sref="index.home">首页</a>
+			登录
+		</header>
+		<ul class="login-way">
+			<li class="phont active"><a>手机验证码登录</a></li>
+			<li class="count"><a>账号密码登录</a></li>
+		</ul>
+		<div class="way">
+			<div class="item phone-count">
+				<div class="slide-con">
+					<div class="identify">
+						<input type="text" class="phonenumber" placeholder="请输入手机号">
+						<button class="get-identify">获取验证码</button>
+					</div>
+				<input type="text" class="password" placeholder="请输入验证码">
+				</div>
+				<button class="login phone">登录</button>
+				<p>未注册的手机号将自动创建为蚂蚁短租账户</p>
+			</div>
+			<div class="item mayi-count">
+				<div class="slide-con">
+					<input type="text" class="user-count" placeholder="请输入手机号码/邮箱/账号">
+					<input type="text" class="password" placeholder="请输入密码">
+				</div>
+				<button class="login count">登录</button>	
+			</div>
+		</div>
+
+		<div class="footer">
+			<p>其他登录方式</p>
+			<a ui-sref="weixin"></a>
+		</div>
+	</div>
+</body>
+</html>

@@ -8,7 +8,15 @@ angular.module('indexPage', [
 	'nearbyPage',
 	'filterPage',
 	'locationPage',
-	'detailsPage'
+	'detailsPage',
+	'loginPage',
+	'orderInfo',
+	'dialogPage',
+	"weekModul",
+	"bestModul",
+	'friendModul',
+	'outingModul',
+	'cityPage'
 	])
 .config(function($stateProvider,$urlRouterProvider){
 	$urlRouterProvider.otherwise('/index/home');

@@ -1,0 +1,152 @@
+@charset "utf-8";
+.mine{
+	background: #f2f2f2;
+	font-size: 0.40625rem;
+}
+.mine .content a{
+	color: #000;
+}
+.mine .content{
+	height: 17.5rem;
+	overflow-x:hidden;
+	overflow-y: scroll;
+}
+.content > div{
+	margin-bottom: 0.375rem;
+}
+.header-empty{
+	width: 100%;
+	height: 50px;
+}
+header{
+	height: 50px;
+	background: #fff;
+	text-align: center;
+	line-height: 50px;
+	font-size: 0.46875rem;
+	letter-spacing: 2px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+}
+.more{
+	display: flex;
+	align-items:center;
+	position: relative;
+	padding-left: 0.25rem;
+}
+.more:after{
+	content:">";
+	position: absolute;
+	right: 0.375rem;
+	display: inline-block;
+	transform: scaleY(1.4);
+	color:gray;
+}
+.user-info{
+	height: 2.5rem;
+	background: #ede7b8;
+	text-align: center;
+	padding-left: 0;
+	margin-bottom: 0.375rem;
+	justify-content: center;
+}
+.user-info .login-btn a{
+	display: inline-block;
+	width: 2.0rem;
+	margin: 0 auto;
+	height: 0.78125rem;
+	line-height: 0.78125rem;
+	margin-top: 0.15625rem;
+	background: #fff;
+	border-radius: 5px;
+}
+.in{
+	display: flex;
+	height: 2.1875rem;
+}
+.in .user-img{
+	width: 2.5rem;
+	height: 100%;
+	background: url(../img/user-img.png) no-repeat center;
+	background-size: auto 80%;
+}
+.in .account{
+	flex-grow:1;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction:column;
+}
+.in .account p{
+	margin-bottom: 0.15625rem;
+}
+.cate-item{
+	height: 1.5625rem;
+	background: #fff;
+	display: flex;
+	border-top : 1px solid #e6e6e6;
+	border-bottom : 1px solid #e6e6e6;
+}
+.cate-item .coupon{
+	background: url(../img/coupon.png) no-repeat center;
+}
+.cate-item .credit{
+	background: url(../img/credit.png) no-repeat center;
+}
+.cate-item .collection{
+	background: url(../img/collection.png) no-repeat center;
+}
+.cate-item .scanner{
+	background: url(../img/scanner.png) no-repeat center;
+}
+.cate-item .inform{
+	background: url(../img/inform.png) no-repeat center;
+}
+.cate-item .needs{
+	background: url(../img/publish.png) no-repeat center;
+}
+.cate-item .consult{
+	background: url(../img/consult.png) no-repeat center;
+}
+.cate-item .service{
+	background: url(../img/service.png) no-repeat center;
+}
+
+.cate-item .landlord{
+	background: url(../img/landlord.png) no-repeat center;
+}
+.cate-item .problem{
+	background: url(../img/problem.png) no-repeat center;
+}
+.cate-item .recommend{
+	background: url(../img/recommend.png) no-repeat center;
+}
+.cate-item .suggest{
+	background: url(../img/suggest.png) no-repeat center;
+}
+.cate-item .about{
+	background: url(../img/about.png) no-repeat center;
+}
+.cate-item .cate-img{
+	width: 0.78125rem;
+	height: 0.78125rem;
+	background-size: auto 80%;
+}
+.cate-item a{
+	flex-grow: 1;
+	height: 100%;
+	display: flex;
+	align-items:center;
+	padding-left: 0.25rem;
+}
+.cate-item span{
+	float: right;
+	font-size: 0.375rem;
+	margin-right: .75rem;
+}
+.center>div,.bottom > div{
+	border-top:none;
+}

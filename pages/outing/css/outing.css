@@ -1,0 +1,223 @@
+header{
+	height: 6.34375rem;
+	width: 100%;
+	background: url(https://staticnew.mayi.com/resourcesWap/topic/2016/guoqing/images/top.jpg)no-repeat;
+	background-size: 100% 6.34375rem;
+	overflow: hidden;
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	font-size: 12px;
+	
+}
+.banner{
+	height: 2.65625rem;
+	width: 6.8125rem;
+	margin: 1.875rem auto;
+
+
+}
+.banner img{
+	width: 100%;
+}
+.main{
+	width: 100%;
+	padding: 0 0.40625rem;
+}
+.main>.words{
+	height: 1.21875rem;
+	width: 100%;
+	line-height: 1.21875rem;
+
+}
+#rule{
+	
+	color:#26b863;
+}
+#rule span{
+	width: 1px;
+    height: .4rem;
+    display: inline-block;
+    background-color: #e0e0e0;
+    position: relative;
+    top: .08rem;
+    margin-left: 0.0725rem;
+    margin-right: .06666rem;
+}
+.words::after{
+	display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+.main li{
+	width: 100%;
+	height: 1.09375rem;
+	line-height: 1.09375rem;
+	margin-bottom: 0.09375rem;
+}
+.public{
+	width: 8.0rem;
+    border: 1px solid #ccc;
+    line-height: .56rem;
+    padding-top: .24rem;
+    padding-bottom: .24rem;
+    padding-left: .1333rem;
+    vertical-align: middle;
+    border-radius: .05333rem;
+    float: right;
+}
+.hide-input{
+	background-color: rgba(0,0,0,0.8);
+	width: 3.125rem;
+	text-align: center;
+	height: 1.125rem;
+	line-height: 1.125rem;
+	color: #fff;
+	z-index: 99999;
+	left: 35%;
+	position: absolute;
+	border-radius: 0.15625rem;
+	display: none;
+}
+select{
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+}
+
+
+
+.submitBtn{
+	height: 1.03125rem;
+	width: 100%;
+	margin-top: 0.21875rem;
+	text-align: center;
+	line-height: 1.03125rem;
+	color: #fff;
+	background-color: #22bb61;
+	font-size: 14px;
+}
+.line{
+	height: 0.03125rem;
+	width: 100%;
+	background-color: #ccc;
+	margin-top: 0.875rem;
+	text-align: center;
+	position: relative;
+	
+
+}
+.line span{
+	font-size: 0.4375rem;
+	display: inline-block;
+	background-color: #fff;
+	padding: 0.0625rem;
+	position: absolute;
+	top: -0.3125rem;
+	left: 42%;
+
+}
+
+.showImg{
+	width: 100%;
+	margin-top: 0.21875rem;
+	overflow: hidden;
+}
+.showImg li{
+	height: 2.0rem;
+	width: 100%;
+	margin-top: 0.40625rem;
+	padding: 0 0.40625rem;
+
+}
+.showImg li img{
+	width: 100%;
+}
+.hideBox{
+	height: 100%;
+	width: 100%;
+	background:rgba(0,0,0,.5);
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	z-index: 99;
+	bottom: 0;
+	display: none;
+}
+.chooseCity{
+	height: 9.75rem;
+	width: 8.6875rem;
+	border-radius: 0.25rem;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%,-50%);
+	z-index: 999;
+
+}
+.chooseCity-1{
+	padding: 0.40625rem 0.4375rem 0 0.4375rem;
+
+}
+
+.city-name{
+	margin-bottom:0.3125rem;
+	text-align: center;
+
+}
+.sity-adress{
+	margin-bottom: 0.1875rem;
+	text-align: center;
+}
+.sity-adress span{
+	font-size: 0.4375rem;
+	color: #22bb61;
+}
+.city-words{
+	line-height: 1.4;
+	margin-top: 0.15625rem;
+}
+.city-herf{
+	display: block;
+	width: 100%;
+    height: 4.8rem;
+    display: block;
+}
+.city-herf img{
+	width: 100%;
+    height: 4.8rem;
+    display: block;
+}
+.close{
+	height: 0.5rem;
+	width: 0.53125rem;
+	background: url(../images/close.png)no-repeat;
+	background-size: contain;
+	position: absolute;
+	right: 0.40625rem;
+	top: 0.46875rem;
+}
+.showImg {
+	margin-bottom: 1.71875rem;
+}
+.hideBox ul{
+	width: 100%;
+	border-top: 0.03125rem #ccc solid;
+	margin-top: 0.25rem;
+	line-height: 1;
+}
+.hideBox ul li{
+	text-align: center;
+	width: 50%;
+	float: left;
+	line-height:  0.9rem;
+}
+.hideBox ul li:nth-of-type(2){
+	color: #22bb61;
+	border-left: 0.03125rem solid #ccc;
+}

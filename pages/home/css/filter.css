@@ -3,6 +3,9 @@
 	font-size: 0.4375rem;
 	background: #f5f5f5 ;
 }
+.activeColor{
+    color: #22bb62;
+}
 .search_header{
 	height:1.40625rem;
 	line-height:1.40625rem;

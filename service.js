@@ -5,9 +5,18 @@ var app = express();
 app.get('/city',function(req,res){
     //获取用户传递过来的参数
     var arg = req.query['kw'];
-    console.log(arg);
+    // console.log(arg);
     httpSearch(arg,function(info){
         res.send(JSON.parse(info));
+    });
+});
+app.get('/area',function(req,res){
+    //获取用户传递过来的参数
+    var arg = req.query['kw'];
+    console.log(arg);
+    httpSearchArea(arg,function(info){
+        res.send(info);
+        console.log(info);
     });
 });
 app.get("*",function(req,res){
@@ -19,6 +28,21 @@ app.listen(9999,function(){
 })
 function httpSearch(kwVal,callback){
     http.get('http://m.mayi.com/ajax/searchmore/?offset=1&isNear=1&query_str=' + kwVal, function(httpRes) {
+        var buffers = [];
+        httpRes.on('data', function(chunk) {
+            buffers.push(chunk);
+        });
+        httpRes.on('end', function(chunk) {
+            var wholeData = Buffer.concat(buffers);
+            var dataStr = wholeData.toString('utf8');
+            callback(wholeData);
+        });
+    }).on('error', function(e) {
+        console.log(e);
+    });
+}
+function httpSearchArea(kwVal,callback){
+    http.get('http://m.mayi.com/' + kwVal + '/?pa=position', function(httpRes) {
         var buffers = [];
         httpRes.on('data', function(chunk) {
             buffers.push(chunk);

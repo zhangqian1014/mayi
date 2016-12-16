@@ -2,10 +2,10 @@
     <header class="search_header">
         <a class="get_back" ng-click="getBack()"></a>
         <p>筛选</p>
-        <span class="clear">清空</span>
+        <span class="clear" ng-click="clear()">清空</span>
     </header>
     <section>
-        <form action="" class="search_form">
+        <form action="" class="search_form" range>
             <div class="col-sm">
                 <p class="filter_tit">标签</p>
                 <div class="label">
@@ -58,7 +58,7 @@
                 <p class="filter_tit">速订</p>
                 <div class="quick_order">
                     <img src="pages/home/images/suding_filter.png" alt="">
-                    <span>无需房东确认，支付后即预订成功。</span>
+                    <b>无需房东确认，支付后即预订成功。</b>
                 </div>
             </div>
             <div class="col-sm">

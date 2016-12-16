@@ -11,22 +11,25 @@ angular.module('filterPage',[])
 		controller:'filter_ctrl'
 	})
 })
-.controller('filter_ctrl',function($scope,$stateParams,$state){
+.controller('filter_ctrl',function($scope,$state,$stateParams){
 	// 返回按钮
 	$scope.getBack = function(){
 		// window.history.back();
 		$state.go('nearby');
 	}
-	// var router = $stateParams.router;
-	// console.log(router);
-	var low = angular.element('.low');
-	var high = angular.element('.high');
+	// 清空按钮
+	$scope.clear = function(){
+		angular.element('.search_form').find('li,span').removeClass('activeColor');
+	}
+	
 })
 .directive('range', function(){
 	return {
 		restrict: 'ECMA',
 		link: function($scope,$ele,$attrs){
-			console.log($ele);
+			$ele.on('click','li,span',function(){
+				$(this).addClass('activeColor').siblings().removeClass('activeColor');
+			})
 		}		
 	}
 })

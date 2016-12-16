@@ -15,8 +15,21 @@ angular.module('nearbyPage',[])
 				// window.history.back();
 				$state.go('index.home');
 			}
-			let p1 = $stateParams.p1;
-			console.log(p1);
+			// let p1 = $stateParams.p1;
+			// console.log(p1);
+			
+            // 获取数据
+			$http.get('http://localhost:9999/city?kw=' + 'beijing')
+			.success(function(data){
+				$scope.datas = data.data;
+				angular.forEach(data.data, function(dataObj,index,arrar){
+					if(index >= 20){
+						return false
+					}
+					hotMap(dataObj,index);
+				})
+
+			})
 			// 地图
   			var map = new AMap.Map('map_container', {
   				resizeEnable:true,
@@ -26,19 +39,6 @@ angular.module('nearbyPage',[])
             map.plugin(["AMap.ToolBar"], function() {
                 map.addControl(new AMap.ToolBar());
             });
-            // 获取数据
-			$http.get('http://localhost:9999/city?kw=' + 'beijing')
-			.success(function(data){
-				$scope.datas = data.data;
-				console.log(data.data);
-				angular.forEach(data.data, function(dataObj,index,arrar){
-					if(index >= 20){
-						return false
-					}
-					hotMap(dataObj,index);
-				})
-
-			})
 	       // 设置地图显示热点
 			function hotMap(list,i){
 				var longitude = list['latlng'].split(',');
@@ -61,10 +61,6 @@ angular.module('nearbyPage',[])
 					$('.room_show li').hide();
 				}
 			})
-
-
-
-
 
 
 

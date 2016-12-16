@@ -1,4 +1,15 @@
-angular.module('indexPage', ['ui.router','angularCSS','homePage','msgPage','orderPage','minePage','nearbyPage','filterPage'])
+angular.module('indexPage', [
+	'ui.router',
+	'angularCSS',
+	'homePage',
+	'msgPage',
+	'orderPage',
+	'minePage',
+	'nearbyPage',
+	'filterPage',
+	'locationPage',
+	'detailsPage'
+	])
 .config(function($stateProvider,$urlRouterProvider){
 	$urlRouterProvider.otherwise('/index/home');
 	$stateProvider

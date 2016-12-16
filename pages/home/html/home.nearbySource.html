@@ -11,7 +11,7 @@
 		<nav class="choose_nav">
 			<a href="">日期</a>
 			<a ui-sref="filter({router:'nearby'})">筛选</a>
-			<a href="">位置区域</a>
+			<a ui-sref="area">位置区域</a>
 			<a href="">默认排序</a>
 		</nav>
 	</div>
@@ -28,7 +28,7 @@
 			<div class="choose_repeat" ng-repeat="mapRoom in datas">
 				<div class="house_content">
 					<div class="collection"></div>
-					<a href="">
+					<a ui-sref="details">
 						<img src="{{mapRoom.mainimgurl}}" alt="">
 						<p class="price abs">
 							<span><b>￥</b>{{mapRoom.dayprice}}</span>

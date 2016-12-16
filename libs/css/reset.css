@@ -1,6 +1,6 @@
 @charset "utf-8";
 html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img,span,figure,figcaption,header,nav,input,table,tbody,td,tr,th,section { margin:0; padding:0;  outline:none;}
-address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal;}
+address, caption, cite, code, dfn, th, var,b,em,i,strong { font-style:normal; font-weight:normal;}
 ul, ol { list-style:none; } 
 *{
 	box-sizing: border-box;

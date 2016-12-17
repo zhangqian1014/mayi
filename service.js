@@ -31,19 +31,23 @@ app.get('/getSuggest',function(request,response){
         platfrom:2
     }; 
     var content = qs.stringify(post_data);  
-      
     var options = {  
         hostname: 'm.mayi.com',  
         path: '/getSuggest',  
         method: 'POST',
         headers: {  
-            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'  
+            'Content-Type':'application/x-www-form-urlencoded'
+            // 'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8',  
+            // 'Content-Length':Buffer.byteLength(postData) 
         }  
     };  
-      
+    
     var req = http.request(options, function (res) {  
-        res.setEncoding('utf-8');  
+        res.setEncoding('utf-8'); 
+        var arr = []; 
         res.on('data', function (chunk) {
+            // arr.push(chunk);
+            // response.send(Buffer.concat(arr));
             response.send(JSON.parse(chunk));
         });  
     });  
@@ -53,11 +57,13 @@ app.get('/getSuggest',function(request,response){
     // write data to request body  
     req.write(content);  
     req.end(); 
-}) 
+});
+
 app.get("*",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
 	res.sendFile(__dirname + req.path);
 });
+
 app.listen(9999,function(){
 	console.log('服务已经启动');
 })

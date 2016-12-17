@@ -86,3 +86,50 @@ ul p{
 	width: 100%;
 	background: #F7F7F7;
 }
+
+.search_list li{
+	padding: 0;	
+	display: block;
+}
+.search_list li.city>a{
+	background:#f2f2f2 url(../images/suggest_icons.png) no-repeat 0.15625rem 0;
+	background-size: 22px 274px;
+}
+.search_list li.subway>a{
+	background:#f2f2f2 url(../images/suggest_icons.png) no-repeat 0.15625rem -127px;
+	background-size: 22px 274px;
+}
+.search_list li.airplane>a{
+	background:#f2f2f2 url(../images/suggest_icons.png) no-repeat 0.15625rem -148px;
+	background-size: 22px 274px;
+}
+.search_list li.trade>a{
+	background:#f2f2f2 url(../images/suggest_icons.png) no-repeat 0.15625rem -105px;
+	background-size: 22px 274px;
+}
+.search_list li.street>a{
+	background:#f2f2f2 url(../images/suggest_icons.png) no-repeat 0.15625rem -63px;
+	background-size: 22px 274px;
+}
+.search_list li.scenery>a{
+	background:#f2f2f2 url(../images/suggest_icons.png) no-repeat 0.15625rem -21px;
+	background-size: 22px 274px;
+}
+.search_list .category>a{
+	display: inline-block;
+	height: 21px;
+	line-height: 21px;
+	padding-left: 1.03125rem;
+	margin: 0.4375rem 0 0.4375rem 0;
+}
+.search_list  div{
+	width: 100%;
+	background:#fff;
+}
+.search_list  div a{
+	height: 1.25rem;
+	line-height: 1.25rem;
+	display: block;
+	padding-left: 1.03125rem;
+	border-bottom: 1px solid #d9d9d9;
+}

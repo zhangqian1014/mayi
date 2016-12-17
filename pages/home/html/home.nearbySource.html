@@ -12,7 +12,7 @@
 			<a href="">日期</a>
 			<a ui-sref="filter({router:'nearby'})">筛选</a>
 			<a ui-sref="area">位置区域</a>
-			<a href="">默认排序</a>
+			<a href="" class="sortBtn">默认排序</a>
 		</nav>
 	</div>
 	<div class="nearby_list_content">
@@ -82,5 +82,16 @@
 			</div>
 			<div id="map_container"></div>
 		</div>
+	</div>
+	<!-- 排序选择 -->
+	<div class="choose_sort">
+		<ul>
+			<li class="on">默认排序</li>
+			<li>价格最高</li>
+			<li>价格最低</li>
+			<li>评分最高</li>
+			<li>评论最多</li>
+			<li>预订最多</li>
+		</ul>
 	</div>
 </div>

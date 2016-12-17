@@ -8,7 +8,7 @@ angular.module('cityPage',[])
 		controller:'city-ctrl'
 	})
 })
-.controller('city-ctrl',function($scope,$http){
+.controller('city-ctrl',function($scope,$http,$rootScope){
 	$http.get('http://localhost:9999/data/cityListData.json')
 	.then(function(res){
 		$scope.opencitys = res.data.opencitys;
@@ -34,18 +34,6 @@ angular.module('cityPage',[])
 		$scope.cityArr = cityArr;
 		$scope.flag = true;
 
-		$(function(){
-			$('.input').on('keyup',function(e){
-				if((e.originalEvent.keyCode >= 65 && e.originalEvent.keyCode <= 90) || e.originalEvent.keyCode == 8){
-					var value = $(this).val().trim();
-					if(value){
-						$.get('http://localhost:9999/getSuggest?value=' + value,function(data){
-							console.log(data.list);
-						});
-					}
-				}		
-			});
-		})
 		// $scope.spellArr = ['A','B','C','D','E','F','G','H','J',
 		// 	'K','L','M','N','P','Q','R','S','T','W','X','Y','Z'];
 	});
@@ -58,11 +46,42 @@ angular.module('cityPage',[])
 			$elem.on('focus','input',function(){
 				$elem.find('.place-list').hide().siblings('.search_list').show();
 			});
-			// $elem.on('keyup','input',function(){
-			// 	console.log(cityArr);
-			// });
+			$elem.on('keyup','input',function(e){
+				if((e.originalEvent.keyCode >= 65 && e.originalEvent.keyCode <= 90) || e.originalEvent.keyCode == 8){
+					var value = $(this).val().trim();
+					console.log(value);
+					if(value){
+						$.get('http://localhost:9999/getSuggest?value=' + value,function(data){
+							console.log(data);
+							var searchArr = [];
+							var data = data.list;
+							for(p in data){
+								var obj = {
+									category: p,
+									list: data[p]
+								}
+								searchArr.push(obj);
+								obj = null;
+							}
+							console.log(searchArr);
+							$scope.$apply(function(){
+								$scope.searchArr = searchArr;
+								$scope.title = 'jja';
+							})
+							console.log($scope);
+							$elem.find('.search_list ul').show();
+							
+						});
+					}
+					else{
+						$('.sort_list').hide();
+					}
+				}		
+			});
+
 			$elem.on('click','.cancel',function(){
 				$elem.find('.place-list').show().siblings('.search_list').hide();
+				$elem.find('.input').val('');
 			});
 		}
 	}

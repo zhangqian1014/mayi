@@ -72,6 +72,7 @@
 	text-align: center;
 	background: #fff;
 	border-top:1px solid #d9d9d9;
+	font-size: 0.4375rem;
 }
 .choose_nav a{
 	flex-grow:1;
@@ -88,7 +89,7 @@
 	margin-top: 97px;
 }
 .nb_room_list{
-	
+	overflow: hidden;
 }
 .choose_div{
 	width:100%;
@@ -281,4 +282,30 @@
 #map_container{
 	width:100%;
 	height:17.75rem;
+}
+
+/*排序*/
+.choose_sort{
+	position:absolute;
+	top:2.9375rem;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+	background: rgba(0,0,0,.3);
+	display: none;
+}
+.choose_sort ul{
+	text-align: center;
+	font-size: 0.5rem;
+	width:100%;
+}
+.choose_sort ul li{
+    width: 100%;
+    line-height: 50px;
+    border-top: 1px #e6e6e6 solid;
+    background: #fff;
+}
+.on{
+	color:#0ebd5e;
 }

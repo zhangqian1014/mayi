@@ -12,9 +12,52 @@
 			<div class="cancel">取消</div>
 		</header>
 		<div class="search_list" style="display: none">
-			<ul>
-				<h2>北京</h2>
-				<li></li>
+			<ul class="sort_list" style="display: none">
+				<!-- sort=1 -->
+				<li class="city category" ng-repeat="x in searchArr" ng-if="x.category==1">
+					<a ui-sref="go">城市</a>
+					<div>
+						<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
+					</div>
+				</li>
+				
+				<!-- sort=3 -->
+				<li class="subway category" ng-repeat="x in searchArr" ng-if="x.category==3">
+					<a ui-sref="go">地铁</a>
+					<div>
+						<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
+					</div>
+				</li>
+				<!-- sort=4 -->
+				<li class="airplane category" ng-repeat="x in searchArr" ng-if="x.category==4">
+					<a ui-sref="go">机场/车站</a>
+					<div>
+						<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
+					</div>
+				</li>
+				<!-- sort=6 -->
+				<li class="trade category" ng-repeat="x in searchArr" ng-if="x.category==6">
+					<a ui-sref="go">商圈</a>
+					<div>
+						<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
+					</div>
+				</li>
+				
+				<!-- sort=7 -->
+				<li class="street category" ng-repeat="x in searchArr" ng-if="x.category==7">
+					<a ui-sref="go">街道</a>
+					<div>
+						<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
+					</div>
+				</li>
+				<!-- sort=8 -->
+				<li class="scenery category" ng-repeat="x in searchArr" ng-if="x.category==8">
+					<a ui-sref="go">景点</a>
+					<div>
+						<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
+					</div>
+				</li>
+				
 			</ul>
 		</div>
 		<div class="place-list">

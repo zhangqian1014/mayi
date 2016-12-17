@@ -16,7 +16,9 @@ angular.module('indexPage', [
 	"bestModul",
 	'friendModul',
 	'outingModul',
-	'cityPage'
+	'cityPage',
+	'collect_scan',
+	'landlorInfoPage'
 	])
 .config(function($stateProvider,$urlRouterProvider){
 	$urlRouterProvider.otherwise('/index/home');

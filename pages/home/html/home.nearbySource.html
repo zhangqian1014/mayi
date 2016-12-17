@@ -6,7 +6,7 @@
 				<li class="source_list active">房源列表</li>
 				<li class="search_map">地图找房</li>
 			</ul>
-			<span class="location_city">北京</span>
+			<a ui-sref="city"><span class="location_city">北京</span></a>
 		</header>
 		<nav class="choose_nav">
 			<a href="">日期</a>
@@ -27,8 +27,8 @@
 			</div>
 			<div class="choose_repeat" ng-repeat="mapRoom in datas">
 				<div class="house_content">
-					<div class="collection"></div>
-					<a ui-sref="details">
+					<div class="collection" data-id="{{mapRoom.id}}" collect-room></div>
+					<a ui-sref="details({roomObj:mapRoom,roomId:mapRoom.id})">
 						<img src="{{mapRoom.mainimgurl}}" alt="">
 						<p class="price abs">
 							<span><b>￥</b>{{mapRoom.dayprice}}</span>
@@ -85,7 +85,7 @@
 	</div>
 	<!-- 排序选择 -->
 	<div class="choose_sort">
-		<ul>
+		<ul class="sort_ul">
 			<li class="on">默认排序</li>
 			<li>价格最高</li>
 			<li>价格最低</li>

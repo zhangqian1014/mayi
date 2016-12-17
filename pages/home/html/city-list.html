@@ -1,97 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>城市列表</title>
-</head>
-<body>
-	<div class="city-list" input-search>
-		<header ng-if="flag">
-			<div class="back"></div>
-			<input type="text" name="" placeholder="搜索城市或目的地" class="input">
-			<div class="cancel">取消</div>
-		</header>
-		<div class="search_list" style="display: none">
-			<ul class="sort_list" style="display: none">
-				<!-- sort=1 -->
-				<li class="city category" ng-repeat="x in searchArr" ng-if="x.category==1">
-					<a ui-sref="go">城市</a>
-					<div>
-						<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
-					</div>
+<div class="city-list" input-search>
+	<header ng-if="flag">
+		<div class="back"></div>
+		<input type="text" name="" placeholder="搜索城市或目的地" class="input">
+		<div class="cancel">取消</div>
+	</header>
+	<div class="search_list" style="display: none">
+		<ul class="sort_list" style="display: none">
+			<!-- sort=1 -->
+			<li class="city category" ng-repeat="x in searchArr" ng-if="x.category==1">
+				<a ui-sref="go">城市</a>
+				<div>
+					<a ui-sref="nearby({name:y.name,url:y.url})" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
+				</div>
+			</li>
+			
+			<!-- sort=3 -->
+			<li class="subway category" ng-repeat="x in searchArr" ng-if="x.category==3">
+				<a ui-sref="go">地铁</a>
+				<div>
+					<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
+				</div>
+			</li>
+			<!-- sort=4 -->
+			<li class="airplane category" ng-repeat="x in searchArr" ng-if="x.category==4">
+				<a ui-sref="go">机场/车站</a>
+				<div>
+					<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
+				</div>
+			</li>
+			<!-- sort=6 -->
+			<li class="trade category" ng-repeat="x in searchArr" ng-if="x.category==6">
+				<a ui-sref="go">商圈</a>
+				<div>
+					<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
+				</div>
+			</li>
+			
+			<!-- sort=7 -->
+			<li class="street category" ng-repeat="x in searchArr" ng-if="x.category==7">
+				<a ui-sref="go">街道</a>
+				<div>
+					<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
+				</div>
+			</li>
+			<!-- sort=8 -->
+			<li class="scenery category" ng-repeat="x in searchArr" ng-if="x.category==8">
+				<a ui-sref="go">景点</a>
+				<div>
+					<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="place-list">
+		<div class="header" ng-if="flag">
+			<ul class="search-nearby">
+				<li>
+					<a href="#search-nearby">搜索附近</a>
 				</li>
-				
-				<!-- sort=3 -->
-				<li class="subway category" ng-repeat="x in searchArr" ng-if="x.category==3">
-					<a ui-sref="go">地铁</a>
-					<div>
-						<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
-					</div>
+			</ul>
+			<ul class="history">
+				<p>历史搜索</p>
+				<li><a href="">厦门</a></li>
+			</ul>
+			<ul class="hot-city">
+				<p>热门目的地</p>
+				<li ng-repeat="x in opencitys" ng-if="x.ishotcity">
+					<!-- http://m.mayi.com/ajax/searchmore/?offset=1&isNear=1&query_str=beijing -->
+					<a ui-sref='nearby({name:x.namechinese,url:"/"+x.url})' data-spell={{x.url}}>{{x.namechinese}}</a>
 				</li>
-				<!-- sort=4 -->
-				<li class="airplane category" ng-repeat="x in searchArr" ng-if="x.category==4">
-					<a ui-sref="go">机场/车站</a>
-					<div>
-						<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
-					</div>
-				</li>
-				<!-- sort=6 -->
-				<li class="trade category" ng-repeat="x in searchArr" ng-if="x.category==6">
-					<a ui-sref="go">商圈</a>
-					<div>
-						<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
-					</div>
-				</li>
-				
-				<!-- sort=7 -->
-				<li class="street category" ng-repeat="x in searchArr" ng-if="x.category==7">
-					<a ui-sref="go">街道</a>
-					<div>
-						<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
-					</div>
-				</li>
-				<!-- sort=8 -->
-				<li class="scenery category" ng-repeat="x in searchArr" ng-if="x.category==8">
-					<a ui-sref="go">景点</a>
-					<div>
-						<a ui-sref="1" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
-					</div>
-				</li>
-				
 			</ul>
 		</div>
-		<div class="place-list">
-			<div class="header" ng-if="flag">
-				<ul class="search-nearby">
-					<li>
-						<a href="#search-nearby">搜索附近</a>
-					</li>
-				</ul>
-				<ul class="history">
-					<p>历史搜索</p>
-					<li><a href="">厦门</a></li>
-				</ul>
-				<ul class="hot-city">
-					<p>热门目的地</p>
-					<li ng-repeat="x in opencitys" ng-if="x.ishotcity">
-						<!-- http://m.mayi.com/ajax/searchmore/?offset=1&isNear=1&query_str=beijing -->
-						<a ui-sref='getCity' data-spell={{x.url}}>{{x.namechinese}}</a>
-					</li>
-				</ul>
-			</div>
 
-			<div>
-				<!-- <ul class="spell-category"  ng-repeat="x in spellArr">	
-					<h2>{{x}}</h2>
-					<li ng-repeat="y in opencitys" ng-if="y.simplespellcn | myFilter: x"><a ui-sref={{y.url}}>{{y.namechinese}}</a></li>
-				</ul> -->
-				<ul class="spell-category"  ng-repeat="x in cityArr">	
-					<h2>{{x.category}}</h2>
-					<li ng-repeat="y in x.cityList"><a ui-sref={{y.url}}>{{y.namechinese}}</a></li>
-				</ul>
-			</div>
+		<div>
+			<!-- <ul class="spell-category"  ng-repeat="x in spellArr">	
+				<h2>{{x}}</h2>
+				<li ng-repeat="y in opencitys" ng-if="y.simplespellcn | myFilter: x"><a ui-sref={{y.url}}>{{y.namechinese}}</a></li>
+			</ul> -->
+			<ul class="spell-category"  ng-repeat="x in cityArr">	
+				<h2>{{x.category}}</h2>
+				<li ng-repeat="y in x.cityList"><a ui-sref={{y.url}}>{{y.namechinese}}</a></li>
+			</ul>
 		</div>
-		
 	</div>
-</body>
-</html> 
+</div>

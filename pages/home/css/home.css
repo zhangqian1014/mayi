@@ -107,11 +107,12 @@ header input{
 	font-weight: normal;
 	font-size: 0.78125rem;
 }
-.hot_city .home_hotCity_listPic li{
+.hot_city .home_hotCity_listPic a{
 	overflow: hidden;
 	position:relative;
+	display: block;
 }
-.hot_city .home_hotCity_listPic li span{
+.hot_city .home_hotCity_listPic a span{
 	position: absolute;
 	font-size: 0.625rem;
 	color:#fff;
@@ -120,7 +121,7 @@ header input{
 	left:50%;
 	transform:translate(-50%);
 }
-.hot_city .home_hotCity_listPic li img{
+.hot_city .home_hotCity_listPic a img{
 	width:100%;
 	float:left;
 }

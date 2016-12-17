@@ -135,6 +135,10 @@
 	background: url(../images/coll_gray.png) no-repeat center center;
 	background-size: 0.84375rem 0.75rem;
 }
+.house_content div.collected{
+	background: url(../images/coll_red.png) no-repeat center center;
+	background-size: 0.84375rem 0.75rem;
+}
 .house_content .abs{
 	position:absolute;
 }
@@ -281,18 +285,19 @@
 
 #map_container{
 	width:100%;
-	height:17.75rem;
+	height:15.3125rem;
 }
 
 /*排序*/
 .choose_sort{
-	position:absolute;
+	position:fixed;
 	top:2.9375rem;
 	left:0;
 	right:0;
 	bottom:0;
 	width:100%;
 	background: rgba(0,0,0,.3);
+	z-index: 10;
 	display: none;
 }
 .choose_sort ul{

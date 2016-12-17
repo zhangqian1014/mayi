@@ -6,6 +6,8 @@ header{
 	display:flex;
 	line-height: 1.40625rem;
 	border-bottom: 1px solid #ccc;
+	top:0;
+	left:0;
 }
 .get_back{
 	width:1.3125rem;
@@ -16,6 +18,130 @@ header{
 	background-size: auto 50%;
 }
 .land_name{
-	width:65%;
+	width:60%;
 	text-align: center;
+}
+.landInfo{
+	display: inline-block;
+	width:1.25rem;
+	height:1.25rem;
+	background: url(../images/land.png) no-repeat center;
+	background-size: 60%;
+	margin-right: 0;
+}
+.roomInfo{
+	display: inline-block;
+	width:1.25rem;
+	height:1.25rem;
+	background: url(../images/room.png) no-repeat center;
+	background-size: 60%;
+	margin-right: 0;
+	margin-left: -0.3125rem;
+}
+.warning{
+	width: 100%;
+	padding:0.3125rem;
+	display:flex;
+	align-items:center;
+	font-size :0.375rem;
+	background: #fff6e5;
+	border-bottom: 1px solid #ccc;
+}
+.warning_icon{
+	flex-basis:25%;
+	margin-right: 0.3125rem;
+}
+.warning_icon img{
+	width:100%;
+	vertical-align: middle;
+}
+.closeBtn{
+	flex-basis:25%;
+	margin-left: 0.25rem;
+}
+.closeBtn img{
+	width:80%;
+}
+
+.selected_room{
+	background: #fff;
+	padding:0.3125rem;
+}
+.selected_room li{
+	overflow: hidden;
+}
+.selected_room img{
+	width:30%;
+	float:left;
+}
+.selected_room .slced_room{
+	width:70%;
+	padding-left: 0.3125rem;
+	float:left;
+	line-height: 0.75rem;
+}
+.room_introduce{
+	text-overflow:ellipsis;
+	white-space: pre;
+	overflow: hidden;
+	font-size: 0.4375rem;
+}
+.room_type{
+	color:#666;
+}
+.room_type span{
+	float:right;
+}
+.room_price{
+	color:#ff6a00;
+	font-size: 0.5rem;
+}
+.room_address{
+	font-size: 0.375rem;
+	color:#666;
+	white-space: pre;
+}
+.dialogContent{
+	height:10.78125rem;
+	background: #fff;
+	border-top:1px solid #ccc;
+	padding:0.3125rem;
+	overflow-y: scroll;
+	padding-bottom: 1.71875rem;
+}
+.dialogContent .host_msg{
+	line-height: 1.71875rem;
+	height:1.71875rem;
+	text-align: right;
+	margin-top: 0.15625rem;
+}
+.dialogContent img{
+	width:1.6875rem;
+	hright:1.6875rem;
+	border-radius: 50%;
+	border:1px solid #fff;
+	vertical-align: middle;
+	margin-left: 0.3125rem;
+}
+
+/*底部*/
+.dialog_footer{
+	display: block;
+	line-height: 1.71875rem;
+	padding: 0 0.15625rem;
+}
+.dialog_footer input{
+	width:80%;
+	height:60%;
+	font-size:0.4375rem;
+	border:1px solid #aaa;
+	border-radius: 5px;
+}
+.dialog_footer button{
+	color:#22bb62;
+	border:1px solid #22bb62;
+	border-radius: 5px;
+	background: #fff;
+	height:60%;
+	width:18%;
 }

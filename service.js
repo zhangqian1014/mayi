@@ -40,8 +40,7 @@ app.get('/getSuggest',function(request,response){
             // 'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8',  
             // 'Content-Length':Buffer.byteLength(postData) 
         }  
-    };  
-    
+    };
     var req = http.request(options, function (res) {  
         res.setEncoding('utf-8'); 
         var arr = []; 
@@ -58,12 +57,10 @@ app.get('/getSuggest',function(request,response){
     req.write(content);  
     req.end(); 
 });
-
 app.get("*",function(req,res){
 	res.header("Access-Control-Allow-Origin","*");
 	res.sendFile(__dirname + req.path);
 });
-
 app.listen(9999,function(){
 	console.log('服务已经启动');
 })
@@ -97,3 +94,23 @@ function httpSearchArea(kwVal,callback){
         console.log(e);
     });
 }
+// app.get('/sitesearch/:keyword' , function (req , res) {
+//     var url = req.params.keyword;
+//     // 查询本机ip
+//     // http://z.qyer.com/qcross/home/ajax?action=sitesearch&keyword=b&timer=1478686648677&_=1478678019964
+//     var sreq = http.request({
+//         host:     'z.qyer.com', // 目标主机
+//         path:     '/qcross/home/ajax?action=sitesearch&keyword='+url, // 目标路径
+//         method:   'get' // 请求方式
+//     }, function(sres){
+//         sres.pipe(res);
+//         sres.on('end', function(){
+//             console.log('done');
+//         });
+//     });
+//     if (/POST|PUT/i.test(req.method)) {
+//         req.pipe(sreq);
+//     } else {
+//         sreq.end();
+//     }
+// }

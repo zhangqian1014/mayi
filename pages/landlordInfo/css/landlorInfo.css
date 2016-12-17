@@ -1,0 +1,236 @@
+body{
+	font-size: 0.375rem;
+}
+header{
+	height: 1.375rem;
+	width: 100%;
+	padding: 0 60px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 1.375rem;
+    text-align: center;
+    font-size: 0.5625rem;
+}
+.top-back{
+	background:url(http://staticnew.mayi.com/resourcesWap/v2015/images/back.png) center center no-repeat;
+	position: absolute;
+	display: inline-block;
+    top: 1px;
+    left: 0;
+    text-align: center;
+    width: 1.3125rem;
+    height: 1.375rem;
+    cursor: pointer;
+    background-size: 0.34375rem 0.6875rem;
+}
+.top-img{
+	position: absolute;
+    top: 0.375rem;
+    z-index: 9;
+    width: 0.84375rem;
+    height: 0.75rem;
+    display: inline-block;
+    right: 1.25rem!important;
+    line-height: 1.375rem;
+}
+.top-more{
+	position: absolute;
+    top:0;
+	right: 0;
+	width: 1.0625rem;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    height: 1.375rem;
+    line-height: 1.4375rem;
+}
+.banner{
+	height: 5.3125rem;
+	width: 100%;
+	background: url(http://staticnew.mayi.com/resourcesWap/images/landlord/fdindex_bg.jpg)no-repeat center top;
+	background-size: contain;
+	padding-top: 0.53125rem;
+	text-align: center;
+	position: relative;
+}
+.user-img{
+	width: 1.9375rem;
+    height: 1.9375rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 0 auto 0.0875rem;
+    display: block;
+}
+.banner p{
+	color: #b0ae9f;
+	margin-top: 0.3125rem;
+}
+.banner ul{
+	width: 6.25rem;
+	margin: 0.625rem auto;
+	text-align: center;
+
+}
+.banner ul li{
+	display: inline-block;
+	color: #fff;
+	margin-left: 0.125rem;
+	border:solid 0.03125rem #b0ae9f;
+	border-radius: 0.28125rem;
+	height: 0.5625rem;
+	padding: 0 .234375rem;
+
+}
+.qRcode{
+	width: 0.5625rem;
+	position: absolute;
+	right: 0.46875rem;
+	top: 0.5625rem;
+}
+.public{
+	width: 3.1875rem;
+	height: 0.8125rem;
+	border:solid 0.03125rem #1fbe6c;
+	border-radius: 0.0625rem;
+	margin: 0.625rem auto 0;
+	color: #1fbe6c;
+	line-height: 0.75rem;
+	text-align: center;
+}
+.public img{
+	height: 0.4375rem;
+	width: 0.5625rem;
+	vertical-align: middle;
+	margin-right: 0.15625rem;
+}
+.reply{
+	height: 2.125rem;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
+.reply ul{
+	width: 100%;
+	padding-top: .265625rem;
+	height: 2.125rem;
+
+}
+.reply ul li{
+	width: 33%;
+	float: left;
+	background: url(http://staticnew.mayi.com/resourcesWap/images/landlord/list_break.png) no-repeat center right;
+	background-size: 0.03125rem .90625rem;
+	height: 100%;
+	text-align: center;
+
+}
+.reply ul li:last-child{
+	background: none;
+}
+.reply ul li p{
+	margin-top: 0.1875rem;
+}
+.reply ul li span{
+	font-size: 0.4375rem;
+	font-weight: bold;
+	display: inline-block;
+	margin-top: 0.3125rem;
+}
+
+.verify{
+	width: 100%;
+	padding-left: 0.3125rem;
+	overflow: hidden;
+	box-sizing:border-box;
+}
+.verify-box{
+	border-bottom: solid 0.03125rem #ccc;
+	width: 100%;
+	height: 100%;
+}
+.verify p{
+	width: 100%;
+	margin-top:0.3125rem;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    line-height: .703125rem;
+    font-size: .4375rem;
+}
+.verify p:last-child{
+	margin-bottom: 0.5625rem;
+}
+
+.verify-title{
+	text-align: center;
+	color: #979694;
+	font-size: .4375rem;
+}
+.verify p img{
+	margin-right: 0.15625rem;
+	vertical-align:middle;
+}
+.verify-box{
+	padding: 0 0.3125rem 0.625rem 0;
+	overflow: hidden;
+}
+.room-title{
+	margin-bottom: 0.3125rem;
+}
+.room-tit{
+	float: left;
+	width: 100%;
+    height: 2.1875rem;
+    display: block;
+    border-bottom: 1px solid #999;
+    margin-bottom: 0.15625rem;
+}
+.room-tit img{
+	vertical-align: middle;
+	width: 3.120rem;
+    height: 2.1870rem;
+    float: left;
+}
+.room-size{
+	width: 5.70315rem;
+    float: left;
+    height: 100%;
+    padding-left: .15625rem;
+    margin-left: 0.3125rem;
+
+}
+.room-size p{
+	margin-top: 0.15625rem;
+	width: 100%;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+   display: block;
+}
+.room-size p:last-child{
+	color: #999;
+	margin-top: 0.625rem;
+}
+.room-box{
+	margin-bottom: 2.0625rem;
+}
+.room-verify{
+	border-bottom: none;
+}
+
+/*回到顶部*/
+#go-top{
+	width: 1.375rem;
+	height: 1.375rem;
+	position: fixed;
+	right: 0.3125rem;
+	bottom:2.71875rem;
+	display: none;
+	transition:all 3s;
+
+}
+#go-top img{
+	width: 100%;
+}

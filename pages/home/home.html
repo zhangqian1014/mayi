@@ -15,9 +15,9 @@
 				<img src="http://staticnew.mayi.com/resourcesWap/v2015/images/my_order.png">
 				<span>我的订单</span>
 			</a>
-			<a href="#">
+			<a ui-sref="collection_scan">
 				<img src="http://staticnew.mayi.com/resourcesWap/v2015/images/check-history.png">
-				<span>浏览记录</span>
+				<span>收藏浏览</span>
 			</a>
 			<a href="#">
 				<img src="http://staticnew.mayi.com/resourcesWap/v2015/images/fd_rect.png">
@@ -71,40 +71,40 @@
 			<h1>热门目的地</h1>
 			<p>玩转热门景点，一起嗨起来</p>
 		</div>
-		<ul class="home_hotCity_listPic">
-			<li>
+		<nav class="home_hotCity_listPic">
+			<a ui-sref="nearby({name:'三亚',url:'/sanya'})">
 				<img src="pages/home/images/sanya.jpg">
 				<span>三亚</span>
-			</li>
-			<li>
+			</a>
+			<a ui-sref="nearby({name:'厦门',url:'/xiamen'})">
 				<img src="pages/home/images/xiamen.jpg">
 				<span>厦门</span>
-			</li>
-			<li>
+			</a>
+			<a ui-sref="nearby({name:'海口',url:'/haikou'})">
 				<img src="pages/home/images/haikou.jpg">
 				<span>海口</span>
-			</li>
-			<li>
+			</a>
+			<a ui-sref="nearby({name:'哈尔滨',url:'/haerbin'})">
 				<img src="pages/home/images/haerbin.jpg">
 				<span>哈尔滨</span>
-			</li>
-			<li>
+			</a>
+			<a ui-sref="nearby({name:'香港',url:'/xianggang'})">
 				<img src="pages/home/images/xianggang.jpg">
 				<span>香港</span>
-			</li>
-			<li>
+			</a>
+			<a ui-sref="nearby({name:'北海',url:'/beihai'})">
 				<img src="pages/home/images/beihai.jpg">
 				<span>北海</span>
-			</li>
-			<li>
+			</a>
+			<a ui-sref="nearby({name:'昆明',url:'/kunming'})">
 				<img src="pages/home/images/kunming.jpg">
 				<span>昆明</span>
-			</li>
-			<li>
+			</a>
+			<a ui-sref="nearby({name:'大理',url:'/dali'})">
 				<img src="pages/home/images/dali.jpg">
 				<span>大理</span>
-			</li>
-		</ul>
+			</a>
+		</nav>
 	</main>
 
 	<!-- 推荐房源 -->
@@ -181,54 +181,26 @@
 
 	<!-- 热门房东 -->
 	<section class="landlord">
-		<div class="home_landlord homt_title">
-			<h1>热门房东</h1>
-			<p>金牌房东热情招待，给你家的关怀</p>
-		</div>
-		<div class="landlord_content">
-			<div class="landlord_list">
-				<section class="landlord_introduce" ng-repeat="land in landlordList">
-					<div class="landlord_details">
-						<img src="{{land.landImg}}">
-						<section>
-							<p>{{land.landName}}</p>
-							<span>{{land.landGender}}</span>
-						</section>
-					</div>
-					<p class="landlord_p">{{land.landInfo}}</p>
-				</section>
-				<!-- <section class="landlord_introduce">
-					<div class="landlord_details">
-						<img src="pages/home/images/QNLTKP18T0FLR9XY6G75M6W5PZ4G9A.jpg_54x54c.jpg">
-						<section>
-							<p>kitty小屋</p>
-							<span>男</span>
-						</section>
-					</div>
-					<p class="landlord_p">我是一个90后的阳光小青年，学的是平面设计，平时喜欢打篮球。在一次出游的时候发现了蚂蚁短租...</p>
-				</section>
-				<section class="landlord_introduce">
-					<div class="landlord_details">
-						<img src="pages/home/images/QNLTKP18T0FLR9XY6G75M6W5PZ4G9A.jpg_54x54c.jpg">
-						<section>
-							<p>kitty小屋</p>
-							<span>男</span>
-						</section>
-					</div>
-					<p class="landlord_p">我是一个90后的阳光小青年，学的是平面设计，平时喜欢打篮球。在一次出游的时候发现了蚂蚁短租...</p>
-				</section>
-				<section class="landlord_introduce">
-					<div class="landlord_details">
-						<img src="pages/home/images/QNLTKP18T0FLR9XY6G75M6W5PZ4G9A.jpg_54x54c.jpg">
-						<section>
-							<p>kitty小屋</p>
-							<span>男</span>
-						</section>
-					</div>
-					<p class="landlord_p">我是一个90后的阳光小青年，学的是平面设计，平时喜欢打篮球。在一次出游的时候发现了蚂蚁短租...</p>
-				</section> -->
+		<a ui-sref="landlorInfo">
+			<div class="home_landlord homt_title">
+				<h1>热门房东</h1>
+				<p>金牌房东热情招待，给你家的关怀</p>
 			</div>
-		</div>
+			<div class="landlord_content">
+				<div class="landlord_list">
+					<section class="landlord_introduce" ng-repeat="land in landlordList">
+						<div class="landlord_details">
+							<img src="{{land.landImg}}">
+							<section>
+								<p>{{land.landName}}</p>
+								<span>{{land.landGender}}</span>
+							</section>
+						</div>
+						<p class="landlord_p">{{land.landInfo}}</p>
+					</section>
+				</div>
+			</div>
+		</a>
 	</section>
 
 	<section class="safe_pay">

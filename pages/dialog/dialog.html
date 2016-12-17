@@ -3,18 +3,33 @@
 		<a href="" class="get_back"></a>
 		<span class="land_name">飞翔</span>
 		<div>
-			<a href="" class="landInfo">房东</a>
-			<a href="" class="roomInfo">房屋</a>
+			<a href="" class="landInfo"></a>
+			<a href="" class="roomInfo"></a>
 		</div>
 	</header>
 	<section class="warning">
-		<img src="">
-		<p>请务必将房款通过蚂蚁短租平台交付，以防诈骗！请务必将房款通过蚂蚁短租平台交付，以防诈骗！请务必将房款通过蚂蚁短租平台交付，以防诈骗！请务必将房款通过蚂蚁短租平台交付，以防诈骗！请务必将房款通过蚂蚁短租平台交付，以防诈骗！请务必将房款通过蚂蚁短租平台交付，以防诈骗！请务必将房款通过蚂蚁短租平台交付，以防诈骗！请务必将房款通过蚂蚁短租平台交付，以防诈骗！请务必将房款通过蚂蚁短租平台交付，以防诈骗！请务必将房款通过蚂蚁短租平台交付，以防诈骗！</p>
-		<img src="">
+		<div class="warning_icon"><img src="pages/dialog/images/warning.png"></div>
+		<p>请务必将房款通过蚂蚁短租平台交付，以防诈骗！如房东线下交易产生纠纷，蚂蚁短租不承担任何责任。若遇到房东提出线下交易的情况，请立即拨打400-400-8384进行举报！</p>
+		<div class="closeBtn"><img src="pages/dialog/images/closeBtn.png"></div>
 	</section>
+	<ul class="selected_room">
+		<li>
+			<img src="pages/home/images/CgEHXVZiRJjD,m9bAAtSdi00gL8600.jpg_500x350c.jpg">
+			<div class="slced_room">
+				<p class="room_introduce">鸟巢附近精致温馨两居，步行5分钟到地铁</p>
+				<p class="room_type">居民-整租 <span>￥<font class="room_price">398</font>/晚</span></p>
+				<p class="room_address">北京市朝阳区北苑街道锦芳路1号院</p>
+			</div>
+		</li>
+	</ul>
+
 	<section class="dialogContent">
-		
+		<p ng-repeat="item in showMsgArr track by $index" class="host_msg">{{item}}<img src="pages/home/images/QNLTKP18T0FLR9XY6G75M6W5PZ4G9A.jpg_54x54c.jpg"></p>
 	</section>
+	<footer class="dialog_footer">
+			<input type="text" placeholder="输入文字" class="text_input">
+			<button class="send_msg">发送</button>
+	</footer>
 
 
 </div>

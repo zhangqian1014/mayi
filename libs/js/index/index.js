@@ -21,7 +21,7 @@ define(['angular'],function(angular){
 		'collect_scan',
 		'landlorInfoPage',
 		'landlordRecruit'
-		])
+	])
 	.config(function($stateProvider,$urlRouterProvider){
 		$urlRouterProvider.otherwise('/index/home');
 		$stateProvider
@@ -31,7 +31,4 @@ define(['angular'],function(angular){
 			css:'pages/footer/css/footer.css'
 		})
 	})
-	.controller('indexCtrl',function($scope){
-		// console.log($);
-})
 })

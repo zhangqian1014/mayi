@@ -5,12 +5,8 @@ header{
 	background-size: 100% 6.34375rem;
 	overflow: hidden;
 }
-*{
-	box-sizing: border-box;
-}
 body{
 	font-size: 12px;
-	
 }
 .banner{
 	height: 2.65625rem;
@@ -220,4 +216,8 @@ select{
 .hideBox ul li:nth-of-type(2){
 	color: #22bb61;
 	border-left: 0.03125rem solid #ccc;
+}
+.homeIcon{
+	background: url(../../../libs/images/home-act.png) no-repeat center 5px;
+	background-size: auto 50%;
 }

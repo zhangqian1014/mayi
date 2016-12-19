@@ -1,6 +1,6 @@
 <div class="city-list" input-search>
 	<header ng-if="flag">
-		<div class="back"></div>
+		<div class="back" ng-click="getback()"></div>
 		<input type="text" name="" placeholder="搜索城市或目的地" class="input">
 		<div class="cancel">取消</div>
 	</header>
@@ -10,7 +10,7 @@
 			<li class="city category" ng-repeat="x in searchArr" ng-if="x.category==1">
 				<a ui-sref="go">城市</a>
 				<div>
-					<a ui-sref="nearby({name:y.name,url:y.url})" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
+					<a ui-sref="nearby({name:y.name,url:y.url,position:false})" ng-repeat="y in x.list">{{y.name}},{{y.genre}}</a>
 				</div>
 			</li>
 			
@@ -68,7 +68,7 @@
 				<p>热门目的地</p>
 				<li ng-repeat="x in opencitys" ng-if="x.ishotcity">
 					<!-- http://m.mayi.com/ajax/searchmore/?offset=1&isNear=1&query_str=beijing -->
-					<a ui-sref='nearby({name:x.namechinese,url:"/"+x.url})' data-spell={{x.url}}>{{x.namechinese}}</a>
+					<a ui-sref='nearby({name:x.namechinese,url:"/"+x.url,position:false})' data-spell={{x.url}}>{{x.namechinese}}</a>
 				</li>
 			</ul>
 		</div>
@@ -80,7 +80,7 @@
 			</ul> -->
 			<ul class="spell-category"  ng-repeat="x in cityArr">	
 				<h2>{{x.category}}</h2>
-				<li ng-repeat="y in x.cityList"><a ui-sref={{y.url}}>{{y.namechinese}}</a></li>
+				<li ng-repeat="y in x.cityList"><a ui-sref='nearby({name:y.namechinese,url:"/"+y.url,position:false})'>{{y.namechinese}}</a></li>
 			</ul>
 		</div>
 	</div>

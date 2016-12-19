@@ -1,0 +1,788 @@
+{
+    "opencitys": [
+        { 
+            "namechinese": "北京",
+            "url": "beijing"
+        },
+        {
+            "namechinese": "上海",
+            "url": "shanghai"
+        },
+        {
+            "namechinese": "三亚",
+            "url": "sanya"
+        },
+        {
+            "namechinese": "成都",
+            "url": "chengdu"
+        },
+        {
+            "namechinese": "杭州",
+            "url": "hangzhou"
+        },
+        {
+            "namechinese": "秦皇岛",
+            "url": "qinhuangdao"
+        },
+        {
+            "namechinese": "广州",
+            "url": "guangzhou"
+        },
+        {
+            "namechinese": "重庆",
+            "url": "chongqing"
+        },
+        {
+            "namechinese": "青岛",
+            "url": "qingdao"
+        },
+        {
+            "namechinese": "南京",
+            "url": "nanjing"
+        },
+        {
+            "namechinese": "深圳",
+            "url": "shenzhen"
+        },
+        {
+            "namechinese": "武汉",
+            "url": "wuhan"
+        },
+        {
+            "namechinese": "苏州",
+            "url": "suzhou"
+        },
+        {
+            "namechinese": "西安",
+            "url": "xian"
+        },
+        {
+            "namechinese": "威海",
+            "url": "weihai"
+        },
+        {
+            "namechinese": "厦门",
+            "url": "xiamen"
+        },
+        {
+            "namechinese": "天津",
+            "url": "tianjin"
+        },
+        {
+            "namechinese": "大连",
+            "url": "dalian"
+        },
+        {
+            "namechinese": "长沙",
+            "url": "changsha"
+        },
+        {
+            "namechinese": "哈尔滨",
+            "url": "haerbin"
+        },
+        {
+            "namechinese": "济南",
+            "url": "jinan"
+        },
+        {
+            "namechinese": "日照",
+            "url": "rizhao"
+        },
+        {
+            "namechinese": "沈阳",
+            "url": "shenyang"
+        },
+        {
+            "namechinese": "太原",
+            "url": "taiyuan"
+        },
+        {
+            "namechinese": "烟台",
+            "url": "yantai"
+        },
+        {
+            "namechinese": "承德",
+            "url": "chengde"
+        },
+        {
+            "namechinese": "海口",
+            "url": "haikou"
+        },
+        {
+            "namechinese": "营口",
+            "url": "yingkou"
+        },
+        {
+            "namechinese": "丽江",
+            "url": "lijiang"
+        },
+        {
+            "namechinese": "长春",
+            "url": "changchun"
+        },
+        {
+            "namechinese": "葫芦岛",
+            "url": "huludao_suizhong"
+        },
+        {
+            "namechinese": "本溪",
+            "url": "benxi"
+        },
+        {
+            "namechinese": "香港",
+            "url": "xianggang"
+        },
+        {
+            "namechinese": "石家庄",
+            "url": "shijiazhuang"
+        },
+        {
+            "namechinese": "台湾.花莲",
+            "url": "taiwanhualian"
+        },
+        {
+            "namechinese": "盘锦",
+            "url": "panjin"
+        },
+        {
+            "namechinese": "西宁",
+            "url": "xining"
+        },
+        {
+            "namechinese": "连云港",
+            "url": "lianyungang"
+        },
+        {
+            "namechinese": "九寨沟",
+            "url": "aba_jiuzhaigou"
+        },
+        {
+            "namechinese": "长白山",
+            "url": "baishan"
+        },
+        {
+            "namechinese": "莆田",
+            "url": "putian"
+        },
+        {
+            "namechinese": "桂林",
+            "url": "guilin"
+        },
+        {
+            "namechinese": "西塘",
+            "url": "jiaxing_jiashan"
+        },
+        {
+            "namechinese": "清远",
+            "url": "qingyuan"
+        },
+        {
+            "namechinese": "防城港",
+            "url": "fangchenggang"
+        },
+        {
+            "namechinese": "合肥",
+            "url": "hefei"
+        },
+        {
+            "namechinese": "西双版纳",
+            "url": "xishuangbanna"
+        },
+        {
+            "namechinese": "恩施",
+            "url": "enshi"
+        },
+        {
+            "namechinese": "赤峰",
+            "url": "chifeng"
+        },
+        {
+            "namechinese": "雪乡",
+            "url": "mudanjiang_hailin"
+        },
+        {
+            "namechinese": "菏泽",
+            "url": "heze"
+        },
+        {
+            "namechinese": "昆明",
+            "url": "kunming"
+        },
+        {
+            "namechinese": "郑州",
+            "url": "zhengzhou"
+        },
+        {
+            "namechinese": "南通",
+            "url": "nantong"
+        },
+        {
+            "namechinese": "张家界",
+            "url": "zhangjiajie"
+        },
+        {
+            "namechinese": "邯郸",
+            "url": "handan"
+        },
+        {
+            "namechinese": "福州",
+            "url": "fuzhou"
+        },
+        {
+            "namechinese": "南宁",
+            "url": "nanning"
+        },
+        {
+            "namechinese": "洱海",
+            "url": "dali_erhai"
+        },
+        {
+            "namechinese": "遂宁",
+            "url": "suining"
+        },
+        {
+            "namechinese": "大理",
+            "url": "dali"
+        },
+        {
+            "namechinese": "丹东",
+            "url": "dandong"
+        },
+        {
+            "namechinese": "泰山",
+            "url": "taian"
+        },
+        {
+            "namechinese": "泉州",
+            "url": "quanzhou"
+        },
+        {
+            "namechinese": "黄山",
+            "url": "huangshan"
+        },
+        {
+            "namechinese": "临汾",
+            "url": "linfen"
+        },
+        {
+            "namechinese": "莫干山",
+            "url": "huzhou"
+        },
+        {
+            "namechinese": "呼伦贝尔",
+            "url": "hulunbeier"
+        },
+        {
+            "namechinese": "平凉",
+            "url": "pingliang"
+        },
+        {
+            "namechinese": "上海迪士尼",
+            "url": "shanghai_dishinileyuan"
+        },
+        {
+            "namechinese": "北海",
+            "url": "beihai"
+        },
+        {
+            "namechinese": "北戴河",
+            "url": "qinhuangdao_beidaihe"
+        },
+        {
+            "namechinese": "延安",
+            "url": "yanan"
+        },
+        {
+            "namechinese": "池州",
+            "url": "chizhou"
+        },
+        {
+            "namechinese": "鼓浪屿",
+            "url": "xiamen_gulangyu"
+        },
+        {
+            "namechinese": "西湖",
+            "url": "hangzhou_xihu"
+        },
+        {
+            "namechinese": "景德镇",
+            "url": "jingdezhen"
+        },
+        {
+            "namechinese": "衡水",
+            "url": "hengshui"
+        },
+        {
+            "namechinese": "天涯海角",
+            "url": "sanya_tianya"
+        },
+        {
+            "namechinese": "衡阳",
+            "url": "hengyang"
+        },
+        {
+            "namechinese": "林芝",
+            "url": "linzhi"
+        },
+        {
+            "namechinese": "拉萨",
+            "url": "lasa"
+        },
+        {
+            "namechinese": "伊犁",
+            "url": "yili"
+        },
+        {
+            "namechinese": "克拉玛依",
+            "url": "kelamayi"
+        },
+        {
+            "namechinese": "黄龙",
+            "url": "aba_songpan"
+        },
+        {
+            "namechinese": "千岛湖",
+            "url": "hangzhou_chunan"
+        },
+        {
+            "namechinese": "横店",
+            "url": "jinhua"
+        },
+        {
+            "namechinese": "台州",
+            "url": "zjtaizhou"
+        },
+        {
+            "namechinese": "吉安",
+            "url": "jian"
+        },
+        {
+            "namechinese": "德宏",
+            "url": "dehong"
+        },
+        {
+            "namechinese": "潮州",
+            "url": "chaozhou"
+        },
+        {
+            "namechinese": "玉溪",
+            "url": "yuxi"
+        },
+        {
+            "namechinese": "陇南",
+            "url": "longnan"
+        },
+        {
+            "namechinese": "郴州",
+            "url": "chenzhou"
+        },
+        {
+            "namechinese": "盐城",
+            "url": "yancheng"
+        },
+        {
+            "namechinese": "嘉峪关",
+            "url": "jiayuguan"
+        },
+        {
+            "namechinese": "绍兴",
+            "url": "shaoxing"
+        },
+        {
+            "namechinese": "通化",
+            "url": "tonghua"
+        },
+        {
+            "namechinese": "南充",
+            "url": "nanchong"
+        },
+        {
+            "namechinese": "广元",
+            "url": "guangyuan"
+        },
+        {
+            "namechinese": "湖州",
+            "url": "huzhou"
+        },
+        {
+            "namechinese": "许昌",
+            "url": "xuchang"
+        },
+        {
+            "namechinese": "黔西南",
+            "url": "qianxinan"
+        },
+        {
+            "namechinese": "南平",
+            "url": "nanping"
+        },
+        {
+            "namechinese": "沧州",
+            "url": "cangzhou"
+        },
+        {
+            "namechinese": "海西",
+            "url": "haixi"
+        },
+        {
+            "namechinese": "普洱",
+            "url": "puer"
+        },
+        {
+            "namechinese": "文昌",
+            "url": "wenchang"
+        },
+        {
+            "namechinese": "黑河",
+            "url": "heihe"
+        },
+        {
+            "namechinese": "锡林郭勒",
+            "url": "xilinguole"
+        },
+        {
+            "namechinese": "榆林",
+            "url": "sxyulin"
+        },
+        {
+            "namechinese": "柳州",
+            "url": "liuzhou"
+        },
+        {
+            "namechinese": "六盘水",
+            "url": "liupanshui"
+        },
+        {
+            "namechinese": "淄博",
+            "url": "zibo"
+        },
+        {
+            "namechinese": "咸宁",
+            "url": "xianning"
+        },
+        {
+            "namechinese": "咸阳",
+            "url": "xianyang"
+        },
+        {
+            "namechinese": "衢州",
+            "url": "quzhou"
+        },
+        {
+            "namechinese": "淮北",
+            "url": "huaibei"
+        },
+        {
+            "namechinese": "昌吉",
+            "url": "changji"
+        },
+        {
+            "namechinese": "雅安",
+            "url": "yaan"
+        },
+        {
+            "namechinese": "安顺",
+            "url": "anshun"
+        },
+        {
+            "namechinese": "丽水",
+            "url": "lishui"
+        },
+        {
+            "namechinese": "阳江",
+            "url": "yangjiang"
+        },
+        {
+            "namechinese": "黔南",
+            "url": "qiannan"
+        },
+        {
+            "namechinese": "伊春",
+            "url": "hljyichun"
+        },
+        {
+            "namechinese": "岳阳",
+            "url": "yueyang"
+        },
+        {
+            "namechinese": "滁州",
+            "url": "chuzhou"
+        },
+        {
+            "namechinese": "宜昌",
+            "url": "yichang"
+        },
+        {
+            "namechinese": "包头",
+            "url": "baotou"
+        },
+        {
+            "namechinese": "韶关",
+            "url": "shaoguan"
+        },
+        {
+            "namechinese": "汕头",
+            "url": "shantou"
+        },
+        {
+            "namechinese": "安康",
+            "url": "ankang"
+        },
+        {
+            "namechinese": "曲靖",
+            "url": "qujing"
+        },
+        {
+            "namechinese": "资阳",
+            "url": "ziyang"
+        },
+        {
+            "namechinese": "三明",
+            "url": "sanming"
+        },
+        {
+            "namechinese": "湘西",
+            "url": "xiangxi"
+        },
+        {
+            "namechinese": "平遥",
+            "url": "jinzhong_pingyao"
+        },
+        {
+            "namechinese": "庐山",
+            "url": "jiujiang_lushan"
+        },
+        {
+            "namechinese": "敦煌",
+            "url": "jiuquan_dunhuang"
+        },
+        {
+            "namechinese": "峨眉山",
+            "url": "leshan_emeishan"
+        },
+        {
+            "namechinese": "南戴河",
+            "url": "qinhuangdao_funing"
+        },
+        {
+            "namechinese": "周庄",
+            "url": "suzhou_kunshan"
+        },
+        {
+            "namechinese": "同里",
+            "url": "suzhou_wujiang"
+        },
+        {
+            "namechinese": "凤凰",
+            "url": "xiangxi_fenghuang"
+        },
+        {
+            "namechinese": "普陀山",
+            "url": "zhoushan_putuo"
+        },
+        {
+            "namechinese": "无锡",
+            "url": "wuxi"
+        },
+        {
+            "namechinese": "珠海",
+            "url": "zhuhai"
+        },
+        {
+            "namechinese": "宁波",
+            "url": "ningbo"
+        },
+        {
+            "namechinese": "大同",
+            "url": "datong"
+        },
+        {
+            "namechinese": "开封",
+            "url": "kaifeng"
+        },
+        {
+            "namechinese": "兰州",
+            "url": "lanzhou"
+        },
+        {
+            "namechinese": "洛阳",
+            "url": "luoyang"
+        },
+        {
+            "namechinese": "舟山",
+            "url": "zhoushan"
+        },
+        {
+            "namechinese": "泰安",
+            "url": "taian"
+        },
+        {
+            "namechinese": "乐山",
+            "url": "leshan"
+        },
+        {
+            "namechinese": "唐山",
+            "url": "tangshan"
+        },
+        {
+            "namechinese": "潍坊",
+            "url": "weifang"
+        },
+        {
+            "namechinese": "延边",
+            "url": "yanbian"
+        },
+        {
+            "namechinese": "扬州",
+            "url": "yangzhou"
+        },
+        {
+            "namechinese": "温州",
+            "url": "wenzhou"
+        },
+        {
+            "namechinese": "保定",
+            "url": "baoding"
+        },
+        {
+            "namechinese": "常州",
+            "url": "changzhou"
+        },
+        {
+            "namechinese": "佛山",
+            "url": "foshan"
+        },
+        {
+            "namechinese": "贵阳",
+            "url": "guiyang"
+        },
+        {
+            "namechinese": "呼和浩特",
+            "url": "huhehaote"
+        },
+        {
+            "namechinese": "银川",
+            "url": "yinchuan"
+        },
+        {
+            "namechinese": "漳州",
+            "url": "zhangzhou"
+        },
+        {
+            "namechinese": "中山",
+            "url": "zhongshan"
+        },
+        {
+            "namechinese": "吉林",
+            "url": "jilinshi"
+        },
+        {
+            "namechinese": "都江堰",
+            "url": "chengdu_dujiangyan"
+        },
+        {
+            "namechinese": "南昌",
+            "url": "nanchang"
+        },
+        {
+            "namechinese": "鞍山",
+            "url": "anshan"
+        },
+        {
+            "namechinese": "新乡",
+            "url": "xinxiang"
+        },
+        {
+            "namechinese": "徐州",
+            "url": "xuzhou"
+        },
+        {
+            "namechinese": "乌鲁木齐",
+            "url": "wulumuqi"
+        },
+        {
+            "namechinese": "临沂",
+            "url": "linyi"
+        },
+        {
+            "namechinese": "锦州",
+            "url": "jinzhou"
+        },
+        {
+            "namechinese": "东莞",
+            "url": "dongguan"
+        },
+        {
+            "namechinese": "蓬莱",
+            "url": "yantai_penglai"
+        },
+        {
+            "namechinese": "博鳌",
+            "url": "qionghai_boao"
+        },
+        {
+            "namechinese": "东戴河",
+            "url": "huludao_dongdaihe"
+        },
+        {
+            "namechinese": "鄂尔多斯",
+            "url": "eerduosi"
+        },
+        {
+            "namechinese": "九江",
+            "url": "jiujiang"
+        },
+        {
+            "namechinese": "凉山",
+            "url": "liangshan"
+        },
+        {
+            "namechinese": "惠州",
+            "url": "huizhou"
+        },
+        {
+            "namechinese": "汉中",
+            "url": "hanzhong"
+        },
+        {
+            "namechinese": "石河子",
+            "url": "shihezi"
+        },
+        {
+            "namechinese": "绵阳",
+            "url": "mianyang"
+        },
+        {
+            "namechinese": "长治",
+            "url": "changzhi"
+        },
+        {
+            "namechinese": "张家口",
+            "url": "zhangjiakou"
+        },
+        {
+            "namechinese": "甘孜",
+            "url": "ganzi"
+        },
+        {
+            "namechinese": "阿拉善",
+            "url": "alashan"
+        },
+        {
+            "namechinese": "儋州",
+            "url": "danzhou"
+        },
+        {
+            "namechinese": "廊坊",
+            "url": "langfang"
+        },
+        {
+            "namechinese": "阳朔",
+            "url": "guilin_yangshuo"
+        },
+        {
+            "namechinese": "嘉兴",
+            "url": "jiaxing"
+        }
+    ]
+}

@@ -40,28 +40,28 @@ header .menu{
 	flex-grow: 1;
 	text-align: center;
 	// padding-left: 0.3125rem;
-	height: 1.5625rem;
+	height: 1.3125rem;
 }
 
 .choose li a{
 	width: 100%;
-	line-height: 1.53125rem;
+	line-height: 1.28125rem;
 	display: block;
 	border-bottom: 1px solid #e7e7e7;
 }
-.choose li a.active{
+.choose li.active a{
 	color: #22bb62;
 	border-bottom: 1px solid #22bb62;
 }
-.empty{
-	width: 100%;
-	height: 1.5625rem;
-	display: none;
-}
+// .empty{
+// 	width: 100%;
+// 	height: 1.3125rem;
+// 	display: none;
+// }
 
 /*主体内容*/
 .room_list{
-	margin-top: 3.125rem;
+	margin-top: 2.875rem;
 }
 .choose_list{
 	overflow: hidden;
@@ -81,6 +81,11 @@ header .menu{
 .house_content{
 	position:relative;
 	background: #fff;
+	position: relative;
+}
+.house_content .scanner{
+	position: absolute;
+	z-index: 2;
 }
 .house_content a{
 	display: block;
@@ -187,4 +192,32 @@ header .menu{
     background-color: #f0f8f5;
     display: inline-block;
     margin-right: 5px;
+}
+.delete_page{
+	width: 10.0rem;
+	height: 17.75rem;
+	background: rgba(0,0,0,.5);
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	display: none;
+}
+.delete_page p{
+	width: 80%;
+	// text-align: center;
+	padding: 0.46875rem 0.3125rem;
+}
+.delete_page p:first-child{
+	background: #000;
+	color: #fff;
+	font-size: 0.40625rem;
+}
+.delete_page p:last-child{
+	background: #fff;
+	color: #000;
+	font-size: 0.46875rem;
 }

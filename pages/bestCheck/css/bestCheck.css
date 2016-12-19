@@ -3,10 +3,6 @@ body{
     font-family: "Microsoft yahei";
     background-color: #f0f0f0;
     font-size: .4375rem;
-    
-}
-*{
-	box-sizing: border-box;
 }
 .top-img img{
 	height: 5.3125rem;
@@ -293,4 +289,8 @@ section p{
 }
 .more-rm{
 	display: none;
+}
+.homeIcon{
+	background: url(../../../libs/images/home-act.png) no-repeat center 5px;
+	background-size: auto 50%;
 }

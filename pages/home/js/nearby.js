@@ -4,12 +4,13 @@ angular.module('nearbyPage',[])
 	.state('nearby',{
 		url:'/nearby',
 		params:{
-			name:'北京',
-			url:'/beijing'
+			name:null,
+			url:null,
+			position:true
 		},
 		templateUrl:'pages/home/html/home.nearbySource.html',
 		css:'pages/home/css/nearby.css',
-		controller: function($scope,$state,$stateParams,$http){
+		controller: function($scope,$state,$stateParams,$http,$rootScope,nearbySer){
 			$('.search_condition li').on('touchstart', function(){
 				$(this).addClass('active').siblings().removeClass('active');
 				$('.nearby_list_content>div').eq($(this).index()).show().siblings().hide();
@@ -19,9 +20,6 @@ angular.module('nearbyPage',[])
 				// window.history.back();
 				$state.go('index.home');
 			}
-			// let p1 = $stateParams.p1;
-			// console.log(p1);
-
 			
 			// 排序选项
 			angular.element('.sortBtn').on('touchstart', function(){
@@ -31,48 +29,90 @@ angular.module('nearbyPage',[])
 				$(this).addClass('on').siblings().removeClass('on');
 			})
 
-			var  paramsName = $stateParams.name;
-			$('.location_city').html(paramsName);
-			var  paramsUrl = $stateParams.url.substring(1);
-            // 获取数据
-			$http.get('http://localhost:9999/city?kw=' + paramsUrl)
-			.success(function(data){
-				console.log(data.data);
-				var showRoom = [];
-				angular.forEach(data.data, function(dataObj,index,arrar){
-					if(index >= 20){
-						return false
-					}
-					showRoom.push(dataObj);
-					//调用地图
-					hotMap(dataObj,index);
-				})
-				$scope.datas = showRoom;
-				$(function(){
-					//判断是否有已收藏的room
-					var bufferData = JSON.parse(localStorage.getItem('collected'));
-					if(bufferData){
-						angular.forEach(bufferData,function(obj,i,a){
-							if(obj.id == showRoom[i].id){
-								//将心设置成红色
-								console.log($('.collection')[0]);
-								$('.collection').eq(i).addClass('collected');
-							}
-						})
-					}
-				})
-			})
-			// 地图
+			//判断请求参数是否存在
+			if($stateParams.name){
+				var paramsName = $stateParams.name;
+				$('.location_city').html(paramsName);
+				var paramsUrl = $stateParams.url.substring(1);
+			}
+			var cityPotsition = $stateParams.position;
+		    // 地图
   			var map = new AMap.Map('map_container', {
   				resizeEnable:true,
-                center: [116.397428,39.90923],
-                zoom: 11
+                zoom: 8
             });
+            if(cityPotsition){
+		       	 //实例化城市查询类
+		        var citysearch = new AMap.CitySearch();
+		        //自动获取用户IP，返回当前城市
+		        citysearch.getLocalCity(function(status, result) {
+		            if (status === 'complete' && result.info === 'OK') {
+		                if (result && result.city && result.bounds) {
+		                    var cityInfo = result.city.substring(0,result.city.length - 1);
+		                   	$http.get('http://localhost:9999/data/citySpell.json')
+		                   	.success(function(res){
+		                   		var cityList = res.opencitys;
+		                   		var flag = true;
+		                   		angular.forEach(cityList,function(data,index,array){
+		                   			if(flag){
+		                   				if(cityInfo == data.namechinese){
+	                   					  	if(!$stateParams.name){
+								            	paramsName = data.namechinese;
+								            	paramsUrl = data.url;
+								            	$('.location_city').html(paramsName);
+								            }
+								            console.log(paramsName,paramsUrl);
+								            getRoomData(paramsUrl);
+		                   					flag = false;
+		                   				}
+		                   			}
+		                   		});	
+		                   	});
+		                }
+		            } else {
+		                alert('定位失败');
+		            }
+		        });
+	       }else{
+	       		getRoomData(paramsUrl);
+	       }
             map.plugin(["AMap.ToolBar"], function() {
                 map.addControl(new AMap.ToolBar());
             });
             // 设置地图中心
             map.setCity([paramsName]);
+
+            // 获取数据
+			function getRoomData(paramsUrl){
+				$http.get('http://localhost:9999/city?kw=' + paramsUrl)
+				.success(function(data){
+					var showRoom = [];
+					angular.forEach(data.data, function(dataObj,index,arrar){
+						if(index >= 20){
+							return false
+						}
+						showRoom.push(dataObj);
+						//调用地图
+						hotMap(dataObj,index);
+					})
+					// $scope.datas = showRoom;
+					$rootScope.datas = showRoom;
+					nearbySer.run();
+					$(function(){
+						//判断是否有已收藏的room
+						var bufferData = JSON.parse(localStorage.getItem('collected'));
+						if(bufferData){
+							angular.forEach(bufferData,function(obj,i,a){
+								if(obj.id == showRoom[i].id){
+									//将心设置成红色
+									console.log($('.collection')[0]);
+									$('.collection').eq(i).addClass('collected');
+								}
+							})
+						}
+					})
+				})
+			}
 
 	       // 设置地图显示热点
 			function hotMap(list,i){
@@ -147,5 +187,10 @@ angular.module('nearbyPage',[])
 				}
 			})
 		}
+	}
+})
+.service('nearbySer',function($rootScope){
+	this.run = function(){
+		console.log($rootScope.datas);
 	}
 })

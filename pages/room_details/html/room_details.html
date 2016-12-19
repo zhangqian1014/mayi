@@ -11,8 +11,8 @@
 		<div class="show_img">
 			<ul>
 				<li><a href=""><img src="{{roomInfoData.mainimgurl}}"></a></li>
-				<li><a href=""><img src="https://i1.mayi.com/gjfs15/M0A/43/CE/CgEHP1ZiRKCgplNYAAt3VzAFGbE510.jpg_500x350c.jpg"></a></li>
-				<li><a href=""><img src="https://i1.mayi.com/gjfs18/M09/C5/1A/CgEHH1ZiRJXhYmYbAArepLUK-LY498.jpg_500x350c.jpg"></a></li>
+				<!-- <li><a href=""><img src="https://i1.mayi.com/gjfs15/M0A/43/CE/CgEHP1ZiRKCgplNYAAt3VzAFGbE510.jpg_500x350c.jpg"></a></li>
+				<li><a href=""><img src="https://i1.mayi.com/gjfs18/M09/C5/1A/CgEHH1ZiRJXhYmYbAArepLUK-LY498.jpg_500x350c.jpg"></a></li> -->
 			</ul>
 		</div>
 	</div>	
@@ -291,16 +291,16 @@
         <span class="pop_tri"></span>
         <ul class="more_ul">
             <li class="menu_action mindex">
-                <span class="my_index"></span>首页
+                <a ui-sref="index.home"><span class="my_index"></span>首页</a>
             </li>
             <li class="menu_action morder">
-                <span class="my_order"></span>订单
+                <a ui-sref="index.order"><span class="my_order"></span>订单</a>
             </li>
             <li class="menu_action mlike">
-                <span class="my_like"></span>收藏
+               <a ui-sref="collection_scan"> <span class="my_like"></span>收藏</a>
             </li>
             <li class="menu_action mhistory">
-                <span class="my_history"></span>浏览
+                <a ui-sref="collection_scan"><span class="my_history"></span>浏览</a>
             </li>
         </ul>
     </div>

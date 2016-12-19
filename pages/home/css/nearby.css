@@ -244,6 +244,9 @@
     overflow:hidden; 
     display: none;
 }
+.room_show ul li a{
+	display: inline-block;
+}
 .room_show ul li img{
 	width: 34%;
 	height:3.0625rem;

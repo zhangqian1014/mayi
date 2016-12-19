@@ -7,11 +7,11 @@
 	<section class="home_banner">
 		<section class="home_banner_bg"></section>
 		<section class="home_banner_listIcon">
-			<a ui-sref="nearby" >
+			<a ui-sref="nearby">
 				<img src="http://staticnew.mayi.com/resourcesWap/v2015/images/near_house.png">
 				<span>附近房源</span>
 			</a>
-			<a href="#">
+			<a ui-sref="index.order">
 				<img src="http://staticnew.mayi.com/resourcesWap/v2015/images/my_order.png">
 				<span>我的订单</span>
 			</a>
@@ -19,7 +19,7 @@
 				<img src="http://staticnew.mayi.com/resourcesWap/v2015/images/check-history.png">
 				<span>收藏浏览</span>
 			</a>
-			<a href="#">
+			<a ui-sref="landlord">
 				<img src="http://staticnew.mayi.com/resourcesWap/v2015/images/fd_rect.png">
 				<span>房东招募</span>
 			</a>
@@ -113,61 +113,29 @@
 			<h1>推荐房源</h1>
 			<p>带你走进最温馨时尚的家</p>
 		</div>
-		<div class="house_content">
+		<div class="house_content" ng-repeat="roomObj in datas">
 			<div class="collection"></div>
 			<a href="">
-				<img src="pages/home/images/CgEHXVZiRJjD,m9bAAtSdi00gL8600.jpg_500x250c.jpg" alt="">
+				<img src="{{roomObj.mainimgurl}}" alt="">
 				<p class="price abs">
-					<span><b>￥</b>398</span>
+					<span><b>￥</b>{{roomObj.dayprice}}</span>
 				</p>
 				<p class="landlord_img abs">
-					<img src="pages/home/images/QNLTKP18T0FLR9XY6G75M6W5PZ4G9A.jpg_54x54c.jpg">
+					<img src="{{roomObj.landlordheadimgurl}}">
 				</p>
 				<p class="room_level abs">
 					<img src="pages/home/images/level9-2_1.png">
 				</p>
 				<dl class="room_intoduce">
-					<dt><span>鸟巢附近精致温馨两居，步行5分钟到地铁</span></dt>
+					<dt><span>{{roomObj.sName}}</span></dt>
 					<dd>
 						<nav>
-							<span class="c22bb62">5.0分</span> ·
-							<span>44评论</span> ·
-							<span>已订6晚</span> ·
+							<span class="c22bb62">{{roomObj.goodCommentRate}}分</span> ·
+							<span>{{roomObj.commentcnt}}评论</span> ·
+							<span>已订{{roomObj.booknightcnt}}晚</span> ·
 							<span>二居</span>
-							<span>住4人</span> ·
-							<span>北苑</span>
-						</nav>
-					</dd>
-				</dl>
-				<ul class="fy_label">
-					<li>长租优惠</li>
-					<li>蚂蚁实拍</li>
-				</ul>
-			</a>
-		</div>
-		<div class="house_content">
-			<div class="collection"></div>
-			<a href="">
-				<img src="pages/home/images/CgEHXVZiRJjD,m9bAAtSdi00gL8600.jpg_500x250c.jpg" alt="">
-				<p class="price abs">
-					<span><b>￥</b>398</span>
-				</p>
-				<p class="landlord_img abs">
-					<img src="pages/home/images/QNLTKP18T0FLR9XY6G75M6W5PZ4G9A.jpg_54x54c.jpg">
-				</p>
-				<p class="room_level abs">
-					<img src="pages/home/images/level9-2_1.png">
-				</p>
-				<dl class="room_intoduce">
-					<dt><span>鸟巢附近精致温馨两居，步行5分钟到地铁</span></dt>
-					<dd>
-						<nav>
-							<span class="c22bb62">5.0分</span> ·
-							<span>44评论</span> ·
-							<span>已订6晚</span> ·
-							<span>二居</span>
-							<span>住4人</span> ·
-							<span>北苑</span>
+							<span>住{{roomObj.guestnum}}人</span> ·
+							<span>{{roomObj.sDisplayaddr}}</span>
 						</nav>
 					</dd>
 				</dl>

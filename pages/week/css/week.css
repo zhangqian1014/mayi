@@ -189,3 +189,7 @@ header>ul .part4{
     text-align: center;
     margin: 0.09375rem 0 0 -0.09375rem;
 }
+.homeIcon{
+	background: url(../../../libs/images/home-act.png) no-repeat center 5px;
+	background-size: auto 50%;
+}

@@ -7,8 +7,8 @@
 			</div>
 		</header>
 		<ul class="choose" choose-click>
-			<li class="coll active"><a  class="active">我的收藏</a></li>
-			<li class="scan"><a >浏览记录</a></li>
+			<li class="coll active"><a>我的收藏</a></li>
+			<li class="scan"><a>浏览记录</a></li>
 		</ul>
 	</div>
 	<div class="room_list">
@@ -48,10 +48,9 @@
 		</div>
 	</div>
 	<div class="room_list" style="display: none">
-		111
-		<!-- <div class="scanner" ng-repeat="item in collectArr track by $index">
+		<div class="scanner" ng-repeat="item in historyData track by $index">
 				<div class="house_content">
-					<a ui-sref="details">
+					<a ui-sref="details delete_room" data-obj="{{item}}">
 						<img src="{{item.mainimgurl}}" alt="">
 						<p class="price abs">
 							<span><b>￥</b>{{item.dayprice}}</span>
@@ -81,6 +80,13 @@
 						</ul>
 					</a>
 				</div>
-		</div> -->
+		</div>
+	</div>
+
+	<!-- 长按事件弹出框div -->
+	<div class="delete_page">
+		<p>{{currentRoom.sName}}</p>
+		<p del-room data-id="{{currentRoom['id']}}">删除该记录</p>
 	</div>
 </div>
+

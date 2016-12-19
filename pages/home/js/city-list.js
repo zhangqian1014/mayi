@@ -8,7 +8,10 @@ angular.module('cityPage',[])
 		controller:'city-ctrl'
 	})
 })
-.controller('city-ctrl',function($scope,$http,$rootScope){
+.controller('city-ctrl',function($scope,$http,$rootScope,$state){
+	$scope.getback = function(){
+		$state.go('index.home');
+	}
 	$http.get('http://localhost:9999/data/cityListData.json')
 	.then(function(res){
 		$scope.opencitys = res.data.opencitys;

@@ -64,7 +64,7 @@
 			<div class="room_show">
 				<ul>
 					<li ng-repeat="mapRoom in datas">
-						<a href="">
+						<a ui-sref="details({roomObj:mapRoom})">
 							<img src="{{mapRoom.mainimgurl}}">
 							<div class="rightPart">
 								<div class="right_name">{{mapRoom.sName}}</div>

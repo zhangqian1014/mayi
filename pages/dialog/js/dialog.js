@@ -19,17 +19,22 @@ angular.module('dialogPage',[])
 	var showMsgArr = JSON.parse(localStorage.getItem('msg'));
 	angular.element('.send_msg').on('touchstart', function(){
 		var msg = angular.element('.text_input').val();
-		if(showMsgArr){
-			showMsgArr.push(msg);
-			localStorage.setItem('msg',JSON.stringify(showMsgArr));
+		if(msg != ''){
+			if(showMsgArr){
+				showMsgArr.push(msg);
+				localStorage.setItem('msg',JSON.stringify(showMsgArr));
+			}else{
+				showMsgArr = [];
+				showMsgArr.push(msg);
+				localStorage.setItem('msg',JSON.stringify(showMsgArr));
+			}
+			$scope.$apply(function(){
+				$scope.showMsgArr = showMsgArr;
+			});
+			angular.element('.text_input').val('');
 		}else{
-			showMsgArr = [];
-			showMsgArr.push(msg);
-			localStorage.setItem('msg',JSON.stringify(showMsgArr));
+			alert('请输入有效内容');
 		}
-		$scope.$apply(function(){
-			$scope.showMsgArr = showMsgArr;
-		})
 
 	});
 	$scope.showMsgArr = showMsgArr;

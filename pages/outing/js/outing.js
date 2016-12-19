@@ -1,4 +1,5 @@
-angular.module("outingModul", [])
+define(['angular','ng_css'],function(angular,css){
+	angular.module("outingModul", [])
 	.config(function($stateProvider, $urlRouterProvider) {
 
 		$stateProvider
@@ -41,5 +42,5 @@ angular.module("outingModul", [])
 
 				}
 			})
-
 	})
+})

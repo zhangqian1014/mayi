@@ -1,4 +1,5 @@
-angular.module("weekModul", [])
+define(['angular','ng_css'],function(angular,css){
+	angular.module("weekModul", [])
 	.config(function($stateProvider, $urlRouterProvider) {
 
 		$stateProvider
@@ -16,5 +17,5 @@ angular.module("weekModul", [])
 					}
 				}
 			})
-
 	})
+})

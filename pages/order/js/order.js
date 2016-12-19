@@ -1,9 +1,11 @@
-angular.module('orderPage',[])
-.config(function($stateProvider,$urlRouterProvider){
-	$stateProvider
-	.state('index.order',{
-		url:'/order',
-		templateUrl:'pages/order/html/order.html',
-		css:'pages/order/css/order.css'
+define(['angular','ng_css'],function(angular,css){
+	angular.module('orderPage',[])
+	.config(function($stateProvider,$urlRouterProvider){
+		$stateProvider
+		.state('index.order',{
+			url:'/order',
+			templateUrl:'pages/order/html/order.html',
+			css:'pages/order/css/order.css'
+		})
 	})
 })

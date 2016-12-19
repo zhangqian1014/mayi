@@ -1,9 +1,11 @@
-angular.module('minePage',[])
-.config(function($stateProvider,$urlRouterProvider){
-	$stateProvider
-	.state('index.mine',{
-		url:'/mine',
-		templateUrl:'pages/mine/html/mine.html',
-		css:'pages/mine/css/mine.css'
+define(['angular','ng_css'],function(angular,css){
+	angular.module('minePage',[])
+	.config(function($stateProvider,$urlRouterProvider){
+		$stateProvider
+		.state('index.mine',{
+			url:'/mine',
+			templateUrl:'pages/mine/html/mine.html',
+			css:'pages/mine/css/mine.css'
+		})
 	})
 })

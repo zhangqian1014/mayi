@@ -1,4 +1,5 @@
-angular.module("bestModul", [])
+define(['angular','ng_css'],function(angular,css){
+	angular.module("bestModul", [])
 	.config(function($stateProvider, $urlRouterProvider) {
 		$stateProvider
 			.state({
@@ -59,3 +60,4 @@ angular.module("bestModul", [])
 
 			})
 	})
+})

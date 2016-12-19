@@ -1,4 +1,5 @@
-angular.module("friendModul", [])
+define(['angular','ng_css'],function(angular,css){
+	angular.module("friendModul", [])
 	.config(function($stateProvider, $urlRouterProvider) {
 		$stateProvider
 			.state({
@@ -15,3 +16,4 @@ angular.module("friendModul", [])
 				}
 			})
 	})
+})

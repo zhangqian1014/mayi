@@ -66,7 +66,7 @@ angular.module('collect_scan',[])
 		}
 	}
 })
-.service('delService',function(){
+.service('delService',function(){       //删除服务
 	this.delLocal = function(key,roomId,element){
 		//1、获取缓存
 		var localData = JSON.parse(localStorage.getItem(key));
@@ -107,8 +107,8 @@ angular.module('collect_scan',[])
 		}
 	}
 })
-//取消收藏的自定义指令
-.directive('delRoom',function(delService){
+//删除浏览记录的自定义指令
+.directive('delHistory',function(delService){
 	return {
 		restrict:'ECMA',
 		link:function($scope,$elem,$attrs){

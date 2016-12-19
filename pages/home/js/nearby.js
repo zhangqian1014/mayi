@@ -10,7 +10,7 @@ angular.module('nearbyPage',[])
 		},
 		templateUrl:'pages/home/html/home.nearbySource.html',
 		css:'pages/home/css/nearby.css',
-		controller: function($scope,$state,$stateParams,$http,$rootScope,nearbySer){
+		controller: function($scope,$state,$stateParams,$http){
 			$('.search_condition li').on('touchstart', function(){
 				$(this).addClass('active').siblings().removeClass('active');
 				$('.nearby_list_content>div').eq($(this).index()).show().siblings().hide();
@@ -35,13 +35,13 @@ angular.module('nearbyPage',[])
 				$('.location_city').html(paramsName);
 				var paramsUrl = $stateParams.url.substring(1);
 			}
-			var cityPotsition = $stateParams.position;
+			var cityPosition = $stateParams.position;
 		    // 地图
   			var map = new AMap.Map('map_container', {
   				resizeEnable:true,
-                zoom: 8
+                // zoom: 11
             });
-            if(cityPotsition){
+	       if(cityPosition){
 		       	 //实例化城市查询类
 		        var citysearch = new AMap.CitySearch();
 		        //自动获取用户IP，返回当前城市
@@ -56,6 +56,7 @@ angular.module('nearbyPage',[])
 		                   		angular.forEach(cityList,function(data,index,array){
 		                   			if(flag){
 		                   				if(cityInfo == data.namechinese){
+		                   					console.log(!$stateParams.name);
 	                   					  	if(!$stateParams.name){
 								            	paramsName = data.namechinese;
 								            	paramsUrl = data.url;
@@ -82,6 +83,8 @@ angular.module('nearbyPage',[])
             // 设置地图中心
             map.setCity([paramsName]);
 
+
+            
             // 获取数据
 			function getRoomData(paramsUrl){
 				$http.get('http://localhost:9999/city?kw=' + paramsUrl)
@@ -95,9 +98,7 @@ angular.module('nearbyPage',[])
 						//调用地图
 						hotMap(dataObj,index);
 					})
-					// $scope.datas = showRoom;
-					$rootScope.datas = showRoom;
-					nearbySer.run();
+					$scope.datas = showRoom;
 					$(function(){
 						//判断是否有已收藏的room
 						var bufferData = JSON.parse(localStorage.getItem('collected'));
@@ -187,10 +188,5 @@ angular.module('nearbyPage',[])
 				}
 			})
 		}
-	}
-})
-.service('nearbySer',function($rootScope){
-	this.run = function(){
-		console.log($rootScope.datas);
 	}
 })

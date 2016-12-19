@@ -103,6 +103,13 @@ aside li{
 .adress-icon{
 	background: url(../images/tubiao.png)no-repeat 0 -0.73125rem;
 }
+select{
+	border:none;
+	font-size: 0.5rem;
+	padding:0.125rem 0.0625rem;
+	-webkit-appearance: none;
+	margin-right: 0.15625rem;
+}
 .user-name input{
 	border:none;
 	height: 0.6875rem;

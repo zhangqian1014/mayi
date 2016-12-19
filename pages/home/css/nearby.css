@@ -255,7 +255,7 @@
 }
 .room_show ul li .rightPart{
 	float:left;
-	width:60%;
+	width:65%;
 	padding:0.3125rem;
 }
 .rightPart .right_name{
@@ -273,7 +273,7 @@
 }
 .right_price{
 	position: absolute;
-	right: -15px;
+	right: 0.3125rem;
 	top:5px;
 	font-weight: normal;
 }

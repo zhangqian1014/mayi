@@ -7,30 +7,13 @@ angular.module("bestModul", [])
 				css: "pages/bestCheck/css/bestCheck.css",
 
 				templateUrl: "pages/bestCheck/html/bestCheck.html",
-				controller: function() {
-					document.documentElement.style.fontSize = innerWidth / 10 + "px";
-					window.onresize = function() {
-						document.documentElement.style.fontSize = innerWidth / 10 + "px";
+				controller: function($scope,goTop) {
+					// 置顶
+					var node = document.getElementsByClassName('go-top')[0];
+					goTop.scroll(node);
+					$scope.gotop = function(){
+						goTop.gotop();
 					}
-
-					// nav 置顶
-
-					var titleTop = document.getElementsByTagName('nav')[0];
-					var goTop = document.getElementById('go-top');
-
-					document.onscroll = function() {
-						var t = document.documentElement.scrollTop || document.body.scrollTop;
-						// console.log(t)
-						if(t >= 170) {
-							titleTop.setAttribute("id", "title-top");
-							goTop.style.display = "block";
-						} else {
-							titleTop.removeAttribute("id");
-							goTop.style.display = "none";
-						};
-
-					}
-
 					// 点击更多或收起
 					var moreBtn = document.getElementsByClassName("moreBtn")[0];
 					var moreBtn1 = document.getElementsByClassName("moreBtn1")[0];
@@ -72,7 +55,6 @@ angular.module("bestModul", [])
 							flag = false;
 						};
 					}
-
 				}
 
 			})

@@ -7,36 +7,13 @@ angular.module("weekModul", [])
 				url: '/week',
 				css: 'pages/week/css/week.css',
 				templateUrl: 'pages/week/html/week.html',
-				controller: function() {
-					document.documentElement.style.fontSize = innerWidth / 10 + "px";
-					window.onresize = function() {
-						document.documentElement.style.fontSize = innerWidth / 10 + "px";
-					}
+				controller: function(goTop,$scope) {
 
-					var goTop = document.getElementById('go-top');
-					var timer='';
-					goTop.onclick= function(){
-						var timer=setInterval(function(){
-						document.body.scrollTop-=20;
-						if(document.body.scrollTop==0){
-							clearInterval(timer)
-						}
-					},10)
-						
-						
-						
-						
+					var node = document.getElementsByClassName('backTop')[0];
+					goTop.scroll(node);
+					$scope.gotop = function(){
+						goTop.gotop();
 					}
-					
-					document.onscroll = function() {
-						var t = document.documentElement.scrollTop || document.body.scrollTop;
-						if(t >= 140) {
-							goTop.style.display = "block";
-						} else {
-							goTop.style.display = "none";
-						};
-					}
-
 				}
 			})
 

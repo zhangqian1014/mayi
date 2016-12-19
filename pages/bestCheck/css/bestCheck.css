@@ -207,7 +207,7 @@ section p{
     text-align: center;
 }
 /*回到顶部*/
-#go-top{
+.go-top{
 	width: 1.375rem;
 	height: 1.375rem;
 	position: fixed;
@@ -217,7 +217,7 @@ section p{
 	transition:all 3s;
 
 }
-#go-top img{
+.go-top img{
 	width: 100%;
 }
 

@@ -158,7 +158,7 @@ header>ul .part4{
     
 }
 /*回到顶部*/
-#go-top{
+.backTop{
 
 	width: 1.375rem;
 	height: 1.375rem;
@@ -168,7 +168,7 @@ header>ul .part4{
 	display: none;
 
 }
-#go-top img{
+.backTop img{
 	width:100%;
 }
 .play-rule{

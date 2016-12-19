@@ -114,8 +114,8 @@
 			<p>带你走进最温馨时尚的家</p>
 		</div>
 		<div class="house_content" ng-repeat="roomObj in datas">
-			<div class="collection"></div>
-			<a href="">
+			<div class="collection" data-id="{{roomObj.id}}" coll-room></div>
+			<a ui-sref="details({roomId:roomObj.id,roomObj:roomObj})">
 				<img src="{{roomObj.mainimgurl}}" alt="">
 				<p class="price abs">
 					<span><b>￥</b>{{roomObj.dayprice}}</span>
@@ -171,11 +171,10 @@
 		</a>
 	</section>
 
-	<section class="safe_pay">
-		
-	</section>
+	<section class="safe_pay"></section>
 	
 	<!--<div class="empty" style="height:55px;"></div>-->
+	<a href="#home_page" class="goTop" ng-click="gotop()"></a>
 </div>
 
 

@@ -6,7 +6,7 @@
 				<li class="source_list active">房源列表</li>
 				<li class="search_map">地图找房</li>
 			</ul>
-			<a ui-sref="city"><span class="location_city">北京</span></a>
+			<a ui-sref="city" ><span class="location_city">北京</span></a>
 		</header>
 		<nav class="choose_nav">
 			<a href="">日期</a>
@@ -25,7 +25,7 @@
 					<li>二居</li>
 				</ul>
 			</div>
-			<div class="choose_repeat" ng-repeat="mapRoom in datas">
+			<div class="choose_repeat" ng-repeat="mapRoom in datas | orderBy: sort">
 				<div class="house_content">
 					<div class="collection" data-id="{{mapRoom.id}}" collect-room></div>
 					<a ui-sref="details({roomObj:mapRoom,roomId:mapRoom.id})">
@@ -87,11 +87,12 @@
 	<div class="choose_sort">
 		<ul class="sort_ul">
 			<li class="on">默认排序</li>
-			<li>价格最高</li>
-			<li>价格最低</li>
-			<li>评分最高</li>
-			<li>评论最多</li>
-			<li>预订最多</li>
+			<li ng-click="sortFun('priceDown')">价格最高</li>
+			<li ng-click="sortFun('priceUp')">价格最低</li>
+			<li ng-click="sortFun('score')">评分最高</li>
+			<li ng-click="sortFun('common')">评论最多</li>
+			<li ng-click="sortFun('order')">预订最多</li>
 		</ul>
 	</div>
+	<a href="#nearby" class="backToTop" ng-click="gotop()"></a>
 </div>

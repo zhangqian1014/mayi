@@ -10,7 +10,7 @@ angular.module('nearbyPage',[])
 		},
 		templateUrl:'pages/home/html/home.nearbySource.html',
 		css:'pages/home/css/nearby.css',
-		controller: function($scope,$state,$stateParams,$http){
+		controller: function($scope,$state,$stateParams,$http,goTop){
 			$('.search_condition li').on('touchstart', function(){
 				$(this).addClass('active').siblings().removeClass('active');
 				$('.nearby_list_content>div').eq($(this).index()).show().siblings().hide();
@@ -23,11 +23,42 @@ angular.module('nearbyPage',[])
 			
 			// 排序选项
 			angular.element('.sortBtn').on('touchstart', function(){
-				angular.element('.choose_sort').toggle();
+				angular.element('.choose_sort').slideToggle();
 			});
 			angular.element('.sort_ul').find('li').on('touchstart', function(){
 				$(this).addClass('on').siblings().removeClass('on');
+				angular.element('.choose_sort').slideUp();
 			})
+
+			//排序功能
+			$scope.sortFun = function(args){
+				switch(args){
+					case 'priceDown':
+						$scope.sort = '-dayprice';
+						break;
+					case 'priceUp':
+						$scope.sort = 'dayprice';
+						break;
+					case 'score':
+						$scope.sort = '-goodCommentRate';
+						break;
+					case 'common':
+						$scope.sort = '-commentcnt';
+						break;
+					case 'order':
+						$scope.sort = '-booknightcnt';
+						break;
+				}
+			}
+
+			//返回顶部
+			var node = document.getElementsByClassName('backToTop')[0];
+			goTop.scroll(node);
+			$scope.gotop = function(){
+				goTop.gotop();
+			}
+
+
 
 			//判断请求参数是否存在
 			if($stateParams.name){
@@ -140,7 +171,8 @@ angular.module('nearbyPage',[])
 		}
 	})
 })
-.directive('collectRoom',function($http,$rootScope){
+//收藏房屋功能
+.directive('collectRoom',function($http,$rootScope,addService){
 	return {
 		restrict:'ECA',
 		link:function($scope,$elem,$attrs){
@@ -148,44 +180,7 @@ angular.module('nearbyPage',[])
 				var $this = $(this);
 				var roomId = $attrs['id'];
 
-				//如果是空心则加入收藏，如果是红心则取消收藏，根据情况判断,去除重复
-				// 取出缓存中的数据，进行对比
-				var localData = JSON.parse(localStorage.getItem('collected'));
-				if(localData){
-					$.each(localData,function(index,elem){
-						//如果缓存中存在了这条记录,则移除
-						if(roomId == elem.id){	
-							//红心收藏
-							$this.removeClass('collected');
-							if(localData.length == 1){
-								localStorage.removeItem('collected')
-							}else{
-								localData.splice(index,1);
-								localStorage.setItem('collected',JSON.stringify(localData));
-							}
-							return false;
-						}
-						//如果遍历到最后依然不存在，则添加收藏
-						if(index == localData.length - 1){
-							$this.addClass('collected');
-							addCollection(roomId,localData);
-						}
-					});
-				}else{
-					$this.addClass('collected');
-					addCollection(roomId,[]);
-				}
-
-				function addCollection(roomId,collectAarr){
-					var showRoom = $scope.datas;
-					$.each(showRoom,function(i,v){
-						if(roomId == v.id){
-							collectAarr.push(v);
-							localStorage.setItem('collected',JSON.stringify(collectAarr));
-							console.log(JSON.parse(localStorage['collected']));
-						}
-					})
-				}
+				addService.collRoom($this,roomId,$scope);
 			})
 		}
 	}

@@ -113,10 +113,10 @@ angular.module('homePage', [])
 	}
 	this.gotop = function(){
 		var timer=setInterval(function(){
-			document.body.scrollTop-=20;
+			document.body.scrollTop-=40;
 			if(document.body.scrollTop==0){
 				clearInterval(timer)
 			}
-		},10)
+		},5)
 	}
 })
